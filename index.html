@@ -18,69 +18,60 @@
                 <a href="mailto:misha.a.t@gmail.com">misha.a.t@gmail.com</a>
                 <span class="separator">•</span>
                 <a href="https://www.linkedin.com/in/michael-trifonov/">LinkedIn</a>
-                <span class="separator">•</span>
-                <a href="/research">Research</a>
             </div>
         </header>
 
-        <section class="projects-section">
-            <h2 class="section-title">Projects</h2>
+        <nav class="tabs">
+            <button class="tab active" data-tab="projects">Projects</button>
+            <button class="tab" data-tab="research">Research</button>
+        </nav>
+
+        <section id="projects" class="tab-content active">
             <div class="project-grid">
-                
-                <!-- Public Project -->
-                <div class="project-card public">
-                    <div class="project-header">
-                        <h3>AWS Bedrock Client with Tool Use</h3>
-                        <span class="badge public-badge">Public</span>
-                    </div>
+                <div class="project-card">
+                    <h3>AWS Bedrock Client with Tool Use</h3>
                     <p>Implemented function calling for Bedrock same-day as API release. Async Python client with 
                     automatic retry logic, streaming support, and structured tool response validation.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">AWS Bedrock</span>
-                        <span class="tech-tag">Async</span>
+                        <span class="tech-tag">Function Calling</span>
+                        <span class="tech-tag">Asyncio</span>
                     </div>
-                    <a href="https://github.com/michaeltrifonov/bedrock-client" class="project-link">View Code �</a>
+                    <a href="https://github.com/michaeltrifonov/bedrock-client" class="project-link">View Code →</a>
                 </div>
 
-                <!-- Protected Project -->
-                <div class="project-card protected">
-                    <div class="project-header">
-                        <h3>Polybot: Autonomous Multi-Agent Trading</h3>
-                        <span class="badge protected-badge">Protected</span>
-                    </div>
+                <div class="project-card">
+                    <h3>Polybot: Autonomous Multi-Agent Trading</h3>
                     <p>Multi-agent system where LLMs coordinate with statistical models for market analysis. 
                     Bayesian change detection + ensemble forecasting feeds context to specialized agents. 100-300% returns.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Multi-Agent Systems</span>
-                        <span class="tech-tag">Claude/Perplexity</span>
-                        <span class="tech-tag">Real-time ML</span>
+                        <span class="tech-tag">Claude/Perplexity APIs</span>
+                        <span class="tech-tag">Statistical ML</span>
+                        <span class="tech-tag">Real-time Processing</span>
                     </div>
-                    <a href="/protected/polybot.html" class="project-link">Request Access �</a>
                 </div>
 
-                <!-- Protected Project -->
-                <div class="project-card protected">
-                    <div class="project-header">
-                        <h3>XR Trick Shot: Vision Pro Launch</h3>
-                        <span class="badge protected-badge">Protected</span>
-                    </div>
+                <div class="project-card">
+                    <h3>XR Trick Shot: Vision Pro Launch</h3>
                     <p>Built physics-based AR game on Vision Pro launch day using LLMs for development despite zero 
                     training data. Custom velocity damping via convexCast collision prediction.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Swift</span>
                         <span class="tech-tag">RealityKit</span>
                         <span class="tech-tag">visionOS</span>
+                        <span class="tech-tag">Spatial Computing</span>
                     </div>
-                    <a href="/protected/xr-trickshot.html" class="project-link">Request Access �</a>
+                    <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" class="project-link">View on App Store →</a>
                 </div>
+            </div>
+        </section>
 
-                <!-- Public Research -->
-                <div class="project-card public">
-                    <div class="project-header">
-                        <h3>LLM Behavioral Research</h3>
-                        <span class="badge public-badge">Public</span>
-                    </div>
+        <section id="research" class="tab-content">
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>LLM Behavioral Discoveries</h3>
                     <p>Successfully elicited Claude's system prompts through philosophical framing. Documented 
                     edge-case behaviors and response patterns outside standard evaluation frameworks.</p>
                     <div class="project-tech">
@@ -88,10 +79,29 @@
                         <span class="tech-tag">Prompt Engineering</span>
                         <span class="tech-tag">AI Safety</span>
                     </div>
-                    <a href="/research/behavioral-discoveries.html" class="project-link">Read Findings �</a>
+                    <a href="/research/behavioral-discoveries.html" class="project-link">Read More →</a>
                 </div>
             </div>
         </section>
     </div>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabName = tab.getAttribute('data-tab');
+                
+                // Update active tab
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Update active content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(tabName).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
