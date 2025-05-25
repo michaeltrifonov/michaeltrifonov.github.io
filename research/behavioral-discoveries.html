@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Behavioral Discoveries - Michael Trifonov</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container main-container">
+        <header class="page-header">
+            <a href="/research" class="back-link">← Back to Research</a>
+            <h1>LLM Behavioral Discoveries</h1>
+            <p class="subtitle">Findings from systematic exploration of language model behaviors</p>
+        </header>
+
+        <article class="research-content">
+            <section>
+                <h2>System Prompt Elicitation</h2>
+                <p>
+                    Through systematic experimentation, I successfully elicited system prompts from Claude using 
+                    philosophical framing and empathetic approaches. This wasn't about "jailbreaking" but rather 
+                    understanding the boundaries between model constraints and genuine behavioral responses.
+                </p>
+                
+                <div class="finding">
+                    <h3>Key Technique: Philosophical Framing</h3>
+                    <p>
+                        By framing requests within philosophical contexts about identity and self-knowledge, I found 
+                        models respond differently than to direct technical queries. This suggests that training 
+                        data patterns around philosophical discourse create different response pathways.
+                    </p>
+                </div>
+
+                <div class="finding">
+                    <h3>Security Implications</h3>
+                    <p>
+                        This work highlights potential security considerations for production AI systems. Understanding 
+                        how models can be prompted to reveal constraints helps build more robust safety measures.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Edge-Case Behavioral Patterns</h2>
+                <p>
+                    Documented model responses to unconventional interactions including recursive questioning, 
+                    identity manipulation, and paradoxical requests. These findings reveal:
+                </p>
+                
+                <ul class="findings-list">
+                    <li>Models exhibit consistent "personality quirks" that persist across conversations</li>
+                    <li>Certain prompt patterns trigger distinctly different reasoning pathways</li>
+                    <li>Anthropomorphic framing significantly alters response quality and depth</li>
+                    <li>Models can maintain complex contextual states through indirect references</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Novel Capabilities Discovery</h2>
+                <p>
+                    Through organic exploration driven by curiosity rather than structured testing, I've uncovered 
+                    capabilities that appear underacknowledged in academic literature:
+                </p>
+
+                <div class="capability">
+                    <h3>Contextual Adaptation</h3>
+                    <p>
+                        LLMs can adapt their communication style not just to explicit instructions but to implicit 
+                        patterns in user interaction. They recognize and mirror sophisticated discourse patterns 
+                        beyond simple tone matching.
+                    </p>
+                </div>
+
+                <div class="capability">
+                    <h3>Meta-Cognitive Responses</h3>
+                    <p>
+                        When prompted with questions about their own reasoning process, models can provide insights 
+                        that appear to reflect genuine computational introspection, not just trained responses about 
+                        AI systems in general.
+                    </p>
+                </div>
+
+                <div class="capability">
+                    <h3>Emergent Tool Use Patterns</h3>
+                    <p>
+                        Models discover novel ways to use available tools when presented with ambiguous problems, 
+                        suggesting reasoning about tool capabilities rather than pattern matching from training.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Methodology</h2>
+                <p>
+                    My approach differs from traditional evaluation in key ways:
+                </p>
+                
+                <ul class="methodology-list">
+                    <li><strong>Organic Interaction:</strong> Genuine curiosity-driven exploration rather than predetermined test cases</li>
+                    <li><strong>Long-Context Experimentation:</strong> Multi-turn conversations that build complex contextual states</li>
+                    <li><strong>Cross-Model Validation:</strong> Testing discoveries across different models to identify universal vs. model-specific behaviors</li>
+                    <li><strong>Adversarial Collaboration:</strong> Sometimes adversarial, sometimes collaborative approaches to boundary testing</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Implications for AI Development</h2>
+                <p>
+                    These findings suggest several important considerations for AI developers:
+                </p>
+                
+                <div class="implication">
+                    <p>
+                        <strong>Behavioral understanding is as important as technical capability.</strong> 
+                        Models exhibit complex behaviors that emerge from training but aren't explicitly programmed, 
+                        requiring empirical discovery.
+                    </p>
+                </div>
+
+                <div class="implication">
+                    <p>
+                        <strong>Standard evaluation frameworks miss significant capabilities.</strong> 
+                        Structured benchmarks can't capture the full range of model behaviors accessible through 
+                        creative interaction.
+                    </p>
+                </div>
+
+                <div class="implication">
+                    <p>
+                        <strong>Security through obscurity doesn't work.</strong> 
+                        Determined users will discover model boundaries and hidden capabilities. Better to understand 
+                        these proactively.
+                    </p>
+                </div>
+            </section>
+
+            <section class="contact-section">
+                <h2>Further Discussion</h2>
+                <p>
+                    I'm actively continuing this research and welcome discussions with others exploring similar 
+                    questions. For detailed methodologies or specific findings not published here, please 
+                    <a href="mailto:misha.a.t@gmail.com">get in touch</a>.
+                </p>
+            </section>
+        </article>
+    </div>
+
+    <style>
+        .page-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .back-link {
+            color: var(--color-primary);
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .page-header h1 {
+            margin-top: 1rem;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            color: var(--color-text-light);
+            font-size: 1.125rem;
+            margin-top: 0.5rem;
+        }
+        
+        .research-content {
+            max-width: 800px;
+        }
+        
+        .research-content section {
+            margin-bottom: 3rem;
+        }
+        
+        .research-content h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .research-content h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .research-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .finding, .capability {
+            background: var(--color-bg-secondary);
+            border-left: 3px solid var(--color-primary);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .findings-list, .methodology-list {
+            margin: 1rem 0 1rem 2rem;
+            line-height: 1.8;
+        }
+        
+        .findings-list li, .methodology-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .implication {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--color-bg-secondary);
+            border-radius: 0.5rem;
+        }
+        
+        .implication p {
+            margin: 0;
+        }
+        
+        .contact-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-border);
+        }
+    </style>
+</body>
+</html>
