@@ -1,0 +1,25 @@
+{
+  "name": "michaeltrifonov.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "encrypt": "node encrypt.js",
+    "build": "node encrypt.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaeltrifonov/michaeltrifonov.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaeltrifonov/michaeltrifonov.github.io/issues"
+  },
+  "homepage": "https://github.com/michaeltrifonov/michaeltrifonov.github.io#readme",
+  "description": "",
+  "devDependencies": {
+    "staticrypt": "^3.5.3"
+  }
+}
