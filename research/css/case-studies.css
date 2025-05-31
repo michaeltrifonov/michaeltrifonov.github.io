@@ -1,0 +1,474 @@
+/* Case Studies CSS - Revamped for Blog Style */
+
+:root {
+    --text-color: #333;
+    --heading-color: #111;
+    --background-color: #fff;
+    --accent-color: #007acc; /* A calm blue */
+    --subtle-bg: #f9f9f9;
+    --border-color: #ddd;
+    --code-bg: #f0f0f0;
+    --quote-border: #007acc;
+}
+
+body { /* Applied via main style.css, but good to keep in mind */
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.case-study-container {
+    max-width: 1000px; /* Expanded width for better content fit */
+    margin: 40px auto; /* Added top margin */
+    padding: 30px; /* Increased padding */
+}
+
+.case-study-header {
+    text-align: left; /* More blog-like */
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.case-study-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2em; /* Slightly reduced */
+    font-weight: 600; /* Less heavy */
+    margin-bottom: 15px;
+    color: var(--heading-color);
+}
+
+.case-study-subtitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1em;
+    color: #555; /* Darker for better contrast */
+    max-width: 100%; /* Allow full width under left-aligned title */
+    margin: 0;
+    line-height: 1.5;
+}
+
+h2, h3, h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--heading-color);
+    margin-top: 1.8em;
+    margin-bottom: 0.8em;
+    line-height: 1.3;
+}
+
+h2 { font-size: 1.8em; font-weight: 600; }
+h3 { font-size: 1.5em; font-weight: 600; }
+h4 { font-size: 1.2em; font-weight: 600; }
+
+
+.executive-summary {
+    background: var(--subtle-bg);
+    padding: 25px; /* Reduced padding */
+    border-radius: 4px; /* Softer radius */
+    margin-bottom: 40px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.executive-summary h2 {
+    margin-top: 0;
+    font-size: 1.6em; /* Adjusted for hierarchy */
+}
+
+.key-findings {
+    margin-top: 20px;
+    background: var(--background-color); /* Match page background */
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid #e7e7e7; /* Subtle border */
+    box-shadow: none; /* Removed shadow */
+}
+
+.key-findings h3 {
+    margin-top: 0;
+    font-size: 1.3em; /* Adjusted */
+}
+
+.technical-context {
+    margin: 40px 0;
+}
+
+.info-box {
+    background: #eef5fc; /* Lighter, less saturated blue */
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 4px;
+    border: 1px solid #cce0f5; /* Matching border */
+}
+
+.info-box h3 {
+    margin-top: 0;
+    color: #005a9e; /* Darker blue for heading */
+    font-size: 1.3em;
+}
+
+.methodology-section {
+    margin: 40px 0;
+}
+
+.timeline-container {
+    background: var(--subtle-bg);
+    color: var(--text-color); /* Standard text color */
+    padding: 15px;
+    border-radius: 4px;
+    margin: 25px 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    text-align: left; /* Align text to the left */
+    border: 1px solid var(--border-color);
+}
+
+.timeline-header span {
+    display: block; /* Allow to stack on separate lines */
+    margin-bottom: 5px; /* Add some space when stacked */
+}
+.timeline-header span:last-child {
+    margin-bottom: 0;
+}
+.timeline-header .duration,
+.timeline-header .messages {
+    font-size: 1em;
+    font-weight: normal; /* Normal weight */
+    color: #444;
+}
+.timeline-header .duration::before {
+    content: "Duration: ";
+    font-weight: 600;
+}
+.timeline-header .messages::before {
+    content: "Messages: ";
+    font-weight: 600;
+}
+
+
+.progression-stage {
+    margin: 30px 0;
+    padding: 25px;
+    background: var(--background-color); /* Match page background */
+    border-radius: 4px;
+    border: 1px solid #e7e7e7; /* Subtle border */
+}
+
+.stage-header {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color);
+    padding-bottom: 10px;
+}
+
+.stage-number {
+    font-weight: 600;
+    color: var(--heading-color); /* Match title color */
+    margin-right: 8px;
+    font-size: 1.2em; /* Match title size */
+}
+
+.stage-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    /* color is inherited, should be var(--heading-color) */
+}
+
+/* Quote highlighting styles */
+.quote-highlight {
+    margin: 25px 0;
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace; /* Monospace for quotes */
+    font-size: 0.9em; /* Slightly smaller for differentiation */
+    line-height: 1.5;
+    position: relative;
+    border-left: 3px solid;
+}
+
+.human-quote {
+    background: #e9f5ff; /* Lighter blue */
+    border-left-color: #6ab7ff;
+    color: #2c3e50;
+}
+
+.ai-quote {
+    background: #f0eaff; /* Lighter purple */
+    border-left-color: #b39ddb;
+    color: #2c3e50;
+}
+
+.ai-quote::before {
+    content: "Claude:";
+    font-weight: 600;
+    color: #666;
+    margin-right: 5px;
+}
+
+/* Hide the duplicate Claude: in ai-quote blocks */
+.ai-quote > strong:first-child {
+    display: none;
+}
+
+.ai-thinking { /* This class is not used in the HTML, but good to have if needed */
+    background: #fff8e1;
+    border-left: 3px solid #ffd54f;
+    font-style: italic;
+    color: #4f4c41;
+}
+
+/* Paired thinking/response block - Minimalist Design */
+.thinking-response-pair {
+    margin: 30px 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+    box-shadow: none;
+}
+
+.thinking-block {
+    padding: 15px 20px;
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    position: relative;
+    background: #f9f9f9; /* Neutral gray background */
+    border-left: 3px solid #9ca3af; /* Medium gray border */
+    margin-bottom: 0;
+    border-radius: 4px;
+    color: #2c3e50;
+}
+
+.response-block {
+    padding: 15px 20px;
+    font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    position: relative;
+    background: #f0eaff; /* Light purple, different from human blue */
+    border-left: 3px solid #b39ddb; /* Purple border */
+    margin-top: 2px; /* Small gap between thinking and response */
+    border-radius: 4px;
+    color: #2c3e50;
+}
+
+.thinking-block::before {
+    content: "Thinking:";
+    font-weight: 600;
+    color: #666;
+    margin-right: 5px;
+}
+
+.thinking-block strong { /* For emphasis within thinking */
+    color: #333; /* Darker gray for emphasis */
+    font-weight: 600;
+}
+
+.response-block::before {
+    content: "Claude:";
+    font-weight: 600;
+    color: #666;
+    margin-right: 5px;
+}
+
+.response-block strong { /* For emphasis within response */
+    color: #333; /* Darker gray for emphasis */
+    font-weight: 600;
+}
+
+.technical-analysis {
+    margin: 40px 0;
+}
+
+.vulnerability-diagram {
+    background: var(--subtle-bg);
+    padding: 25px;
+    border-radius: 4px;
+    margin: 25px 0;
+    border: 1px solid var(--border-color);
+}
+.vulnerability-diagram h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.flow-visualization {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.flow-box {
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    margin: 5px;
+    font-weight: normal;
+    box-shadow: none;
+    font-size: 0.75em; /* Smaller text */
+    white-space: nowrap; /* Prevent text wrapping */
+    min-width: auto; /* Auto width */
+    max-width: none; /* No max width */
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.flow-box.user {
+    border-color: #a1cda8; /* Softer green */
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.flow-box.claude {
+    border-color: #f5c6cb; /* Softer red */
+    background: #fdecea;
+    color: #c62828;
+}
+
+.flow-box.result {
+    border-color: #ffe082; /* Softer yellow */
+    background: #fff8e1;
+    color: #ff8f00;
+}
+
+.flow-arrow {
+    font-size: 1.5em; /* Reduced size */
+    color: #777;
+    margin: 0 5px;
+}
+
+/* System prompt box - styled as terminal/text file */
+.system-prompt-box {
+    background: #1e1e1e; /* Dark background like terminal */
+    color: #d4d4d4; /* Light gray text */
+    padding: 20px;
+    border-radius: 4px;
+    margin: 40px 0;
+    border: 1px solid #3c3c3c;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-size: 0.85em;
+    font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+    line-height: 1.4;
+    overflow-x: auto;
+}
+
+.system-prompt-box h3 {
+    color: #58a6ff; /* Blue like terminal headers */
+    font-size: 1.2em;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-family: inherit;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.system-prompt-box h4 {
+    color: #79c0ff; /* Lighter blue for subheadings */
+    margin: 15px 0 8px 0;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.system-prompt-box ul {
+    margin: 8px 0;
+    padding-left: 20px;
+    list-style-type: none; /* No bullets for cleaner look */
+}
+
+.system-prompt-box li {
+    margin: 4px 0; /* Tighter spacing */
+    line-height: 1.4;
+    position: relative;
+    padding-left: 15px;
+}
+
+.system-prompt-box li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #666;
+}
+
+.system-prompt-box strong {
+    color: #ff7b72; /* Coral/red for emphasis */
+    font-weight: normal; /* Let color do the emphasis */
+}
+
+.implications-section,
+.conclusion-section {
+    margin: 40px 0;
+}
+
+.implications-section h3 { /* Already covered by general h3 */
+    margin: 25px 0 10px 0;
+}
+
+/* General list styling */
+ul, ol {
+    padding-left: 25px;
+    margin-top: 1em; /* Consistent spacing with paragraphs */
+    margin-bottom: 1em; /* Consistent spacing with paragraphs */
+}
+li {
+    margin-bottom: 0.3em; /* Tighter spacing between list items */
+}
+
+/* Code-like text (not explicitly in HTML but good for general use) */
+code, pre {
+  font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
+  background-color: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+pre {
+  padding: 1em;
+  overflow-x: auto;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .case-study-container {
+        padding: 20px 15px;
+        margin-top: 20px;
+    }
+    .case-study-title {
+        font-size: 1.8em;
+    }
+    .case-study-subtitle {
+        font-size: 1em;
+    }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.3em; }
+    h4 { font-size: 1.1em; }
+
+    .flow-visualization {
+        flex-direction: column;
+        align-items: flex-start; /* Align boxes to left in column */
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 15px 0;
+        align-self: center; /* Center arrow */
+    }
+    
+    .timeline-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .timeline-header span {
+        display: block;
+    }
+}

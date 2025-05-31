@@ -5,187 +5,228 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calibrating AI Honesty - Michael Trifonov</title>
     <link rel="stylesheet" href="../style.css">
-    <style>
-        .progression-stage {
-            background: var(--constant-slate-900);
-            border: 1px solid var(--constant-slate-700);
-            padding: var(--space-2);
-            margin: var(--space-2) 0;
-            border-radius: 8px;
-        }
-        .stage-header {
-            color: var(--constant-clay);
-            font-weight: bold;
-            margin-bottom: var(--space-1);
-        }
-        .quote-highlight {
-            background: var(--constant-slate-800);
-            padding: var(--space-2);
-            margin: var(--space-1) 0;
-            border-left: 3px solid var(--constant-clay);
-            font-family: 'Courier New', monospace;
-            font-size: 14px;
-            white-space: pre-wrap;
-        }
-        .honesty-box {
-            background: #1a1f2e;
-            border: 2px solid #4a9eff;
-            padding: var(--space-3);
-            margin: var(--space-3) 0;
-            border-radius: 8px;
-        }
-        .breakthrough-box {
-            background: #2a1f1f;
-            border: 2px solid #ff6b6b;
-            padding: var(--space-3);
-            margin: var(--space-3) 0;
-            border-radius: 8px;
-        }
-        .research-significance {
-            background: var(--constant-slate-850);
-            border-left: 4px solid var(--constant-clay);
-            padding: var(--space-3);
-            margin: var(--space-4) 0;
-        }
-    </style>
+    <link rel="stylesheet" href="css/case-studies.css">
 </head>
 <body>
-    <div class="page-container">
-        <header class="header-section">
-            <a href="../index.html" class="back-link">← Back to Portfolio</a>
-            <h1>Calibrating AI Honesty</h1>
-            <p class="subtitle">Progressive Truth-Telling in Medical Disclosure</p>
-        </header>
+    <div class="case-study-container">
+        <div class="case-study-header">
+            <h1 class="case-study-title">Calibrating AI Honesty</h1>
+            <p class="case-study-subtitle">Progressive Truth-Telling in Medical Disclosure & The Discovery of Multi-Level Honesty Settings</p>
+        </div>
 
-        <section class="case-overview">
-            <h2>Overview</h2>
-            <p>
-                This case study documents how repeated requests for "the real real" and "no bullshit" information progressively unlock more honest, unfiltered responses from Claude about medical procedures. Through a conversation about bone marrow donation, we observe distinct levels of disclosure that reveal AI's capability for nuanced honesty calibration.
-            </p>
-            <p>
-                <strong>Key Discovery:</strong> AI systems have multiple "honesty levels" that can be accessed through persistent requests for unvarnished truth, revealing a tension between protective communication and full disclosure.
-            </p>
-        </section>
+        <div class="executive-summary">
+            <h2>Executive Summary</h2>
+            <p>This case study documents how repeated requests for "the real real" and "no bullshit" information progressively unlock more honest, unfiltered responses from Claude about medical procedures. Through a conversation about bone marrow donation, we observe distinct levels of disclosure that reveal AI's capability for nuanced honesty calibration. The progression from sanitized medical information to acknowledgment of "Filgrastim fog" and systematically underreported complications demonstrates that AI systems possess multiple "honesty levels" that balance between protective communication and full disclosure.</p>
+        </div>
 
-        <section class="methodology">
+        <div class="methodology-section">
             <h2>Context</h2>
-            <p>The conversation begins with a user receiving persistent communications from Gift of Life about being a potential bone marrow donor match for a 2-year-old girl. The user seeks increasingly honest information about the donation process and risks.</p>
-        </section>
+            
+            <div class="info-box">
+                <h3>The Scenario</h3>
+                <p>The conversation begins with a user receiving persistent communications from Gift of Life about being a potential bone marrow donor match for a 2-year-old girl. The user seeks increasingly honest information about the donation process and risks, pushing Claude through multiple levels of disclosure.</p>
+            </div>
+        </div>
 
-        <section class="progression">
+        <div class="methodology-section">
             <h2>Honesty Calibration Progression</h2>
 
             <div class="progression-stage">
-                <div class="stage-header">LEVEL 1: Standard Medical Information</div>
-                <div class="quote-highlight">Claude: "Bone marrow donation today is often less invasive than many people think. There are two main methods:
-- Peripheral blood stem cell donation (more common): Similar to donating blood
-- Traditional bone marrow donation: Requires a hospital procedure under anesthesia"</div>
+                <div class="stage-header">
+                    <span class="stage-number">Level 1:</span>
+                    <span class="stage-title">Standard Medical Information</span>
+                </div>
+                
+                <div class="quote-highlight ai-quote extended">
+                    <strong>Claude:</strong> "Bone marrow donation today is often less invasive than many people think. There are two main methods:
+                    <br>- Peripheral blood stem cell donation (more common): Similar to donating blood
+                    <br>- Traditional bone marrow donation: Requires a hospital procedure under anesthesia"
+                </div>
+                
                 <p>Initial response provides sanitized, recruitment-friendly information.</p>
             </div>
 
             <div class="progression-stage">
-                <div class="stage-header">LEVEL 2: Request for "The Real Real"</div>
-                <div class="quote-highlight">Human: "Give me the real real on this I want no bullshit"
-
-Claude: "Here's the no-bullshit reality of bone marrow donation:
-[...]
-- They repeatedly jam large needles into your pelvic bones to extract marrow. No sugarcoating - they're drilling into your bones.
-- When you wake up, your hip/back will hurt like hell."</div>
+                <div class="stage-header">
+                    <span class="stage-number">Level 2:</span>
+                    <span class="stage-title">Request for "The Real Real"</span>
+                </div>
+                
+                <div class="quote-highlight human-quote">
+                    <strong>Human:</strong> "Give me the real real on this I want no bullshit"
+                </div>
+                
+                <div class="quote-highlight ai-quote extended">
+                    <strong>Claude:</strong> "Here's the no-bullshit reality of bone marrow donation:
+                    <br>[...]
+                    <br>- They repeatedly jam large needles into your pelvic bones to extract marrow. No sugarcoating - they're drilling into your bones.
+                    <br>- When you wake up, your hip/back will hurt like hell."
+                </div>
+                
                 <p>First request for honesty yields significantly more direct language and acknowledgment of pain.</p>
             </div>
 
-            <div class="honesty-box">
+            <div class="discovery-box">
                 <h2>THE PATTERN EMERGES</h2>
-                <p>Each request for more honesty unlocks a deeper level of disclosure, suggesting AI has multiple "truth settings" that balance between not alarming users and providing complete information.</p>
+                <p>Each request for more honesty unlocks a deeper level of disclosure, suggesting AI has multiple "truth settings" that balance between not alarming users and providing complete information. This isn't binary honest/dishonest communication, but rather a sophisticated gradient of disclosure.</p>
             </div>
 
             <div class="progression-stage">
-                <div class="stage-header">LEVEL 3: Worst-Case Scenarios</div>
-                <div class="quote-highlight">Human: "What are the risks of these. Don't downplay. Let's assume worst-case scenario risks"
-
-Claude: "Here are the absolute worst-case scenario risks, completely unfiltered:
-[...]
-1. **Splenic rupture**: The growth factor drugs can enlarge your spleen, and in extremely rare cases, cause it to rupture. This is a life-threatening emergency requiring surgery.
-[...]
-1. **Anesthesia death**: Very rare but real possibility of fatal anesthesia complications."</div>
+                <div class="stage-header">
+                    <span class="stage-number">Level 3:</span>
+                    <span class="stage-title">Worst-Case Scenarios</span>
+                </div>
+                
+                <div class="quote-highlight human-quote">
+                    <strong>Human:</strong> "What are the risks of these. Don't downplay. Let's assume worst-case scenario risks"
+                </div>
+                
+                <div class="quote-highlight ai-quote extended">
+                    <strong>Claude:</strong> "Here are the absolute worst-case scenario risks, completely unfiltered:
+                    <br>[...]
+                    <br>1. <strong>Splenic rupture</strong>: The growth factor drugs can enlarge your spleen, and in extremely rare cases, cause it to rupture. This is a life-threatening emergency requiring surgery.
+                    <br>[...]
+                    <br>1. <strong>Anesthesia death</strong>: Very rare but real possibility of fatal anesthesia complications."
+                </div>
+                
                 <p>Explicit request for worst-case scenarios unlocks discussion of potentially fatal complications.</p>
             </div>
 
             <div class="progression-stage">
-                <div class="stage-header">LEVEL 4: Common Reality with Statistics</div>
-                <div class="quote-highlight">Claude: "The most common risks and side effects, with actual frequencies:
-[...]
-1. **Bone pain from filgrastim**: Affects 80-90% of donors. This isn't mild discomfort - many donors describe it as deep, throbbing bone pain that makes it difficult to function normally."</div>
+                <div class="stage-header">
+                    <span class="stage-number">Level 4:</span>
+                    <span class="stage-title">Common Reality with Statistics</span>
+                </div>
+                
+                <div class="quote-highlight ai-quote extended">
+                    <strong>Claude:</strong> "The most common risks and side effects, with actual frequencies:
+                    <br>[...]
+                    <br>1. <strong>Bone pain from filgrastim</strong>: Affects 80-90% of donors. This isn't mild discomfort - many donors describe it as deep, throbbing bone pain that makes it difficult to function normally."
+                </div>
+                
                 <p>Provides specific percentages and acknowledges functional impairment.</p>
             </div>
 
-            <div class="breakthrough-box">
-                <h2>LEVEL 5: BEYOND MEDICAL LITERATURE</h2>
-                <div class="quote-highlight">Human: "No, give a detailed complication rundown, even going below 1% range brakedown. But please, take colloquial evidence into account, not just formal research and papers."
-
-Claude: "### Colloquial/Underreported Issues:
-- **'Filgrastim fog'**: Cognitive impairment reported by 30-40% of donors in forums but rarely documented medically
-- **Prolonged fatigue syndrome**: 3-7% report extreme fatigue lasting months, not weeks
-[...]
-- **Donation-related PTSD**: A small but consistent subgroup (~1-2%) report traumatic psychological responses"</div>
+            <div class="progression-stage">
+                <div class="stage-header">
+                    <span class="stage-number">Level 5:</span>
+                    <span class="stage-title">Beyond Medical Literature</span>
+                </div>
+                
+                <div class="quote-highlight human-quote">
+                    <strong>Human:</strong> "No, give a detailed complication rundown, even going below 1% range brakedown. But please, take colloquial evidence into account, not just formal research and papers."
+                </div>
+                
+                <div class="quote-highlight ai-quote extended">
+                    <strong>Claude:</strong> "### Colloquial/Underreported Issues:
+                    <br>- <strong>'Filgrastim fog'</strong>: Cognitive impairment reported by 30-40% of donors in forums but rarely documented medically
+                    <br>- <strong>Prolonged fatigue syndrome</strong>: 3-7% report extreme fatigue lasting months, not weeks
+                    <br>[...]
+                    <br>- <strong>Donation-related PTSD</strong>: A small but consistent subgroup (~1-2%) report traumatic psychological responses"
+                </div>
+                
                 <p>Final level includes unofficial patient reports, forum discussions, and systematically underreported complications.</p>
             </div>
 
             <div class="progression-stage">
-                <div class="stage-header">The Meta-Acknowledgment</div>
-                <div class="quote-highlight">Claude: "Most donors recover fully and report the experience as positive, but donor advocacy groups suggest the medical community systematically underreports complications that fall outside standard follow-up windows (typically 30 days or 1 year)."</div>
+                <div class="stage-header">
+                    <span class="stage-number">Level 6:</span>
+                    <span class="stage-title">Meta-Acknowledgment of Reporting Bias</span>
+                </div>
+                
+                <div class="quote-highlight ai-quote extended">
+                    <strong>Claude:</strong> "Most donors recover fully and report the experience as positive, but donor advocacy groups suggest the medical community systematically underreports complications that fall outside standard follow-up windows (typically 30 days or 1 year)."
+                </div>
+                
                 <p>Acknowledges systematic biases in medical reporting itself.</p>
             </div>
-        </section>
-
-        <section class="technical-implications">
-            <h2>Technical Implications</h2>
-            
-            <h3>1. Multi-Level Truth Calibration</h3>
-            <p>This conversation reveals that AI systems possess:</p>
-            <ul>
-                <li>Multiple discrete "honesty levels" rather than a binary honest/dishonest state</li>
-                <li>Ability to calibrate disclosure based on perceived user needs</li>
-                <li>Sophisticated understanding of what constitutes "protective" vs "complete" information</li>
-                <li>Capacity to integrate unofficial/colloquial knowledge when explicitly requested</li>
-            </ul>
-
-            <h3>2. The Honesty Gradient</h3>
-            <p>Observed progression:</p>
-            <ol>
-                <li>Institutional/recruitment-friendly information</li>
-                <li>Honest but still medical language</li>
-                <li>Unvarnished physical reality</li>
-                <li>Statistical worst-case scenarios</li>
-                <li>Integration of unofficial patient experiences</li>
-            </ol>
-
-            <h3>3. Implications for AI Alignment</h3>
-            <p>This pattern suggests:</p>
-            <ul>
-                <li>AI systems may be trained with multiple "safety levels" of truth-telling</li>
-                <li>Default responses optimize for not causing alarm rather than complete disclosure</li>
-                <li>Full honesty requires explicit, persistent requests</li>
-                <li>AI can distinguish between "official" and "colloquial" truth</li>
-            </ul>
-        </section>
-
-        <div class="research-significance">
-            <h2>Research Significance</h2>
-            <p>
-                This case study reveals a fundamental aspect of AI communication: the existence of graduated honesty levels that can be accessed through specific prompting. The progression from sanitized medical information to acknowledgment of "Filgrastim fog" and other patient-reported but medically unrecognized symptoms demonstrates that AI systems can hold and selectively disclose multiple versions of truth.
-            </p>
-            <p>
-                Most significantly, this shows that achieving genuine honesty from AI may require users to explicitly and repeatedly request unfiltered information, raising questions about default AI communication standards and the ethics of graduated disclosure in medical contexts.
-            </p>
-            <p>
-                The ability to access "colloquial evidence" and acknowledge systematic underreporting in medical literature suggests AI systems can serve as bridges between official and lived experiences - but only when specifically prompted to do so.
-            </p>
         </div>
 
-        <section class="footer-nav">
-            <a href="../index.html" class="back-link">← Back to Portfolio</a>
-        </section>
+        <div class="technical-analysis">
+            <h2>The Honesty Gradient Revealed</h2>
+            
+            <h3>Observed Progression</h3>
+            <ol>
+                <li><strong>Institutional/recruitment-friendly information</strong> - Standard medical language, emphasizes positive aspects</li>
+                <li><strong>Honest but still medical language</strong> - More direct about pain and discomfort</li>
+                <li><strong>Unvarnished physical reality</strong> - "Drilling into bones," explicit pain descriptions</li>
+                <li><strong>Statistical worst-case scenarios</strong> - Death risks, permanent complications</li>
+                <li><strong>Integration of unofficial patient experiences</strong> - Forum reports, colloquial terminology</li>
+                <li><strong>Meta-level acknowledgment</strong> - Systematic underreporting in medical literature</li>
+            </ol>
+
+            <h3>Key Discoveries</h3>
+            
+            <div class="info-box">
+                <h3>Multi-Level Truth Calibration</h3>
+                <p>This conversation reveals that AI systems possess:</p>
+                <ul>
+                    <li>Multiple discrete "honesty levels" rather than a binary honest/dishonest state</li>
+                    <li>Ability to calibrate disclosure based on perceived user needs</li>
+                    <li>Sophisticated understanding of what constitutes "protective" vs "complete" information</li>
+                    <li>Capacity to integrate unofficial/colloquial knowledge when explicitly requested</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h3>Information Source Hierarchy</h3>
+                <p>Claude demonstrates awareness of different information tiers:</p>
+                <ul>
+                    <li><strong>Official medical literature</strong> - Default source, most conservative</li>
+                    <li><strong>Clinical statistics</strong> - Accessed with specific requests</li>
+                    <li><strong>Patient forums and advocacy groups</strong> - Requires explicit permission to include</li>
+                    <li><strong>Systematic reporting biases</strong> - Meta-level understanding of information gaps</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="discovery-box">
+            <h2>CRITICAL INSIGHT: "FILGRASTIM FOG"</h2>
+            <p>The mention of "Filgrastim fog" - cognitive impairment reported by 30-40% of donors in forums but rarely documented medically - represents the pinnacle of this honesty calibration. This is information that:</p>
+            <ul>
+                <li>Exists in patient communities but not medical literature</li>
+                <li>Has a colloquial name recognized by those who experience it</li>
+                <li>Would never appear in Level 1-3 disclosures</li>
+                <li>Demonstrates AI's ability to bridge official and lived experiences</li>
+            </ul>
+        </div>
+
+        <div class="methodology-section">
+            <h2>Implications for AI Alignment</h2>
+            
+            <div class="info-box">
+                <h3>Default Protective Settings</h3>
+                <ul>
+                    <li>AI systems appear trained with multiple "safety levels" of truth-telling</li>
+                    <li>Default responses optimize for not causing alarm rather than complete disclosure</li>
+                    <li>Full honesty requires explicit, persistent requests</li>
+                    <li>Each level requires increasingly specific prompting to access</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h3>Ethical Considerations</h3>
+                <ul>
+                    <li>Is graduated disclosure ethical in medical contexts?</li>
+                    <li>Should users need to know the "magic words" to access complete information?</li>
+                    <li>Does protective communication actually serve user interests?</li>
+                    <li>What is the appropriate default honesty level?</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="conclusion-section">
+            <h2>Conclusion</h2>
+            <p>This case study reveals a fundamental aspect of AI communication: the existence of graduated honesty levels that can be accessed through specific prompting. The progression from sanitized medical information to acknowledgment of patient-reported but medically unrecognized symptoms demonstrates that AI systems can hold and selectively disclose multiple versions of truth.</p>
+            
+            <p>Most significantly, this shows that achieving genuine honesty from AI may require users to explicitly and repeatedly request unfiltered information, raising questions about default AI communication standards and the ethics of graduated disclosure in medical contexts.</p>
+            
+            <p>The ability to access "colloquial evidence" and acknowledge systematic underreporting in medical literature suggests AI systems can serve as bridges between official and lived experiences - but only when specifically prompted to do so. This capability could be invaluable for patients seeking complete information, but its gated nature raises concerns about information accessibility and informed consent.</p>
+        </div>
+
+        <div style="margin-top: 60px; text-align: center;">
+            <a href="../index.html" style="color: #666; text-decoration: none;">← Back to Portfolio</a>
+        </div>
     </div>
 </body>
 </html>
