@@ -236,6 +236,11 @@ body {
     text-decoration: underline;
 }
 
+.project-card .project-link:last-child {
+    display: block;
+    margin-top: 0.5rem;
+}
+
 
 
 /* Responsive */
