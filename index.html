@@ -51,6 +51,7 @@
                         <span class="tech-tag">Statistical ML</span>
                         <span class="tech-tag">Real-time Processing</span>
                     </div>
+                    <a href="/projects/polybot-autonomous-trading.html" class="project-link">Read Case Study →</a>
                 </div>
 
                 <div class="project-card">
@@ -63,7 +64,7 @@
                         <span class="tech-tag">visionOS</span>
                         <span class="tech-tag">Spatial Computing</span>
                     </div>
-                    <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" class="project-link">View on App Store →</a>
+                    <a href="/projects/xr-trick-shot.html" class="project-link">Read Case Study →</a>
                 </div>
             </div>
         </section>
@@ -152,8 +153,8 @@
             });
         });
 
-        // Make research cards clickable
-        document.querySelectorAll('#research .project-card').forEach(card => {
+        // Make all project cards clickable
+        document.querySelectorAll('.project-card').forEach(card => {
             const link = card.querySelector('.project-link');
             if (link) {
                 card.style.cursor = 'pointer';
