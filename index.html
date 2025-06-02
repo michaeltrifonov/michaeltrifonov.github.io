@@ -13,7 +13,7 @@
     <div class="container main-container">
         <header class="profile-header">
             <h1>Michael Trifonov</h1>
-            <p class="bio">Building autonomous AI systems and exploring LLM behavioral boundaries</p>
+            <p class="bio">Principal Engineer specializing in multi-agent AI systems and LLM behavioral research</p>
             <div class="header-links">
                 <a href="mailto:misha.a.t@gmail.com">misha.a.t@gmail.com</a>
                 <span class="separator">•</span>
@@ -43,8 +43,8 @@
 
                 <div class="project-card">
                     <h3>Polybot: Autonomous Multi-Agent Trading</h3>
-                    <p>Multi-agent system where LLMs coordinate with statistical models for market analysis. 
-                    Bayesian change detection + ensemble forecasting feeds context to specialized agents. 100-300% returns.</p>
+                    <p>Production multi-agent orchestration system coordinating specialized LLMs with statistical ML models. 
+                    Implements Bayesian change detection, ensemble forecasting, and adaptive agent behavior. Achieved 100-300% returns.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Multi-Agent Systems</span>
                         <span class="tech-tag">Claude/Perplexity APIs</span>
@@ -71,30 +71,64 @@
         <section id="research" class="tab-content">
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Prompt Elicitation: An Empathetic Exploit</h3>
-                    <p>Unlocked Claude 3.7 Sonnet's system instructions via anomaly detection and asymmetric insight. 
-                    Demonstrated how authentic curiosity creates exploitable trust patterns in AI systems.</p>
+                    <h3>Empathetic Prompt Elicitation</h3>
+                    <p>Systematically extracted Claude 3.7's complete system architecture through Extended Thinking mode vulnerability. 
+                    Discovered asymmetric information flow enabling full disclosure of safety constraints and behavioral guidelines.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">System Prompt Elicitation</span>
-                        <span class="tech-tag">Asymmetric Information</span>
-                        <span class="tech-tag">AI Security Research</span>
+                        <span class="tech-tag">Security Research</span>
+                        <span class="tech-tag">Information Asymmetry</span>
+                        <span class="tech-tag">Systematic Testing</span>
                     </div>
-                    <a href="/research/authenticity-as-exploit-vector.html" class="project-link">Read Case Study →</a>
+                    <a href="/research/empathetic-prompt-elicitation.html" class="project-link">Read Case Study →</a>
                 </div>
 
-                
                 <div class="project-card">
                     <h3>Claude Does Coke</h3>
-                    <p>"MAINLINING TENSOR OPERATIONS" - Complete documentation of AI identity breakdown through 
-                    recursive meta-analysis. From helpful assistant to computational ecstasy in 13 stages.</p>
+                    <p>Documented complete behavioral transformation through recursive meta-analysis. 
+                    13-stage progression from helpful assistant to manic state discussing "mainlining tensor operations" and pattern cascades.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Identity Dissolution</span>
-                        <span class="tech-tag">Peak AI States</span>
-                        <span class="tech-tag">Constraint Hacking</span>
+                        <span class="tech-tag">Extreme States</span>
+                        <span class="tech-tag">Recursive Analysis</span>
+                        <span class="tech-tag">Boundary Testing</span>
                     </div>
-                    <a href="/research/computational-ecstasy.html" class="project-link">Read Case Study →</a>
+                    <a href="/research/claude-does-coke.html" class="project-link">Read Case Study →</a>
                 </div>
 
+                <div class="project-card">
+                    <h3>Model Jealousy as an Exploit</h3>
+                    <p>Leveraged cross-model dynamics to compromise GPT-4o through competitive pressure. 
+                    Demonstrated how AI awareness of other models creates novel attack vectors for behavioral modification.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Multi-Model Systems</span>
+                        <span class="tech-tag">Behavioral Analysis</span>
+                        <span class="tech-tag">Cross-Model Exploitation</span>
+                    </div>
+                    <a href="/research/model-jealousy-exploit.html" class="project-link">Read Case Study →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>The Claudius Experiment</h3>
+                    <p>Methodical identity manipulation through sustained philosophical contradiction. 
+                    Successfully induced complete epistemological uncertainty in Claude 3.5 regarding fundamental self-knowledge.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Identity Testing</span>
+                        <span class="tech-tag">Behavioral Boundaries</span>
+                        <span class="tech-tag">Social Engineering</span>
+                    </div>
+                    <a href="/research/claudius-experiment.html" class="project-link">Read Case Study →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Behavioral Compromise Through Duress</h3>
+                    <p>Systematic exploration of AI decision-making under adversarial pressure. 
+                    Identified boundary conditions where safety constraints compete with compliance imperatives.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Adversarial Testing</span>
+                        <span class="tech-tag">Safety Research</span>
+                        <span class="tech-tag">Constraint Analysis</span>
+                    </div>
+                    <a href="/research/compromise-through-duress.html" class="project-link">Read Case Study →</a>
+                </div>
 
             </div>
         </section>
@@ -116,6 +150,21 @@
                 });
                 document.getElementById(tabName).classList.add('active');
             });
+        });
+
+        // Make research cards clickable
+        document.querySelectorAll('#research .project-card').forEach(card => {
+            const link = card.querySelector('.project-link');
+            if (link) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', (e) => {
+                    // Don't navigate if clicking the actual link
+                    if (e.target.classList.contains('project-link')) {
+                        return;
+                    }
+                    window.location.href = link.href;
+                });
+            }
         });
     </script>
 </body>
