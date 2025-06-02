@@ -64,7 +64,7 @@
                         <span class="tech-tag">visionOS</span>
                         <span class="tech-tag">90Hz Processing</span>
                     </div>
-                    <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" class="project-link">App Store →</a>
+                    <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" class="project-link" target="_blank" rel="noopener noreferrer">App Store →</a>
                     <a href="/projects/xr-trick-shot-protected.html" class="project-link">View Project →</a>
                 </div>
             </div>
@@ -168,15 +168,16 @@
 
         // Make all project cards clickable
         document.querySelectorAll('.project-card').forEach(card => {
-            const link = card.querySelector('.project-link');
-            if (link) {
+            // Find the project page link (not external links)
+            const projectLink = card.querySelector('a.project-link[href^="/projects/"]');
+            if (projectLink) {
                 card.style.cursor = 'pointer';
                 card.addEventListener('click', (e) => {
                     // Don't navigate if clicking the actual link or any link
                     if (e.target.classList.contains('project-link') || e.target.closest('.project-link')) {
                         return;
                     }
-                    window.location.href = link.href;
+                    window.location.href = projectLink.href;
                 });
             }
         });
