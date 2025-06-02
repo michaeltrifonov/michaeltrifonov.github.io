@@ -176,12 +176,6 @@
                     if (e.target.classList.contains('project-link') || e.target.closest('.project-link')) {
                         return;
                     }
-                    // For cards with multiple links, default to project page
-                    const projectLink = card.querySelector('a[href*="/projects/"][href*="protected"]');
-                    if (projectLink) {
-                        window.location.href = projectLink.href;
-                        return;
-                    }
                     window.location.href = link.href;
                 });
             }
