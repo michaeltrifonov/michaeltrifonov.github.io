@@ -3,212 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polybot: Autonomous Multi-Agent Trading System - Michael Trifonov</title>
+    <title>Polybot - Michael Trifonov</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../research/css/case-studies.css">
-    <style>
-        .architecture-diagram {
-            background: #f8f9fa;
-            border-radius: 8px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .metric-box {
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .metric-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2563eb;
-            margin-bottom: 0.5rem;
-        }
-        
-        .metric-label {
-            color: #6b7280;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-    </style>
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-    <div class="case-study-container">
-        <div class="case-study-header">
-            <h1 class="case-study-title">Polybot: Autonomous Multi-Agent Trading System</h1>
-            <p class="case-study-subtitle">Production AI System Achieving 100-300% Returns Through Multi-Agent Orchestration</p>
+    <div class="project-container">
+        <div class="project-header">
+            <h1 class="project-title">Polybot</h1>
+            <p class="project-subtitle">Autonomous Multi-Agent Trading System</p>
         </div>
 
-        <div class="executive-summary">
-            <h2>Project Overview</h2>
-            <p><em>Built January 2025 - Present | Sole Developer</em></p>
-            <p>Polybot is a fully autonomous trading system that leverages multi-agent LLM orchestration to identify and exploit prediction market inefficiencies. The system processes real-time feeds from news sources, social media, and market data across hundreds of markets simultaneously, maintaining complete autonomous operation from market discovery through position closure.</p>
-            
-            <div class="metrics-grid">
-                <div class="metric-box">
-                    <div class="metric-value">100-300%</div>
-                    <div class="metric-label">Returns on Opportunities</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">100s</div>
-                    <div class="metric-label">Markets Monitored</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">$0.001</div>
-                    <div class="metric-label">LLM Cost per Decision</div>
-                </div>
-                <div class="metric-box">
-                    <div class="metric-value">24/7</div>
-                    <div class="metric-label">Autonomous Operation</div>
-                </div>
+        <div class="project-overview">
+            <div class="project-meta">
+                <span class="date">January 2025 - Present</span>
+                <span class="separator">•</span>
+                <span class="role">Sole Developer</span>
             </div>
+            <p class="lead">Fully autonomous trading system leveraging multi-agent LLM orchestration to identify and exploit prediction market inefficiencies. Processes real-time feeds across hundreds of markets with complete autonomous operation from discovery through position closure.</p>
         </div>
 
-        <div class="technical-context">
-            <h2>Technical Architecture</h2>
-            
-            <div class="architecture-diagram">
-                <h3>Multi-Agent Orchestration Design</h3>
-                <p>The system employs specialized LLM agents for distinct cognitive tasks:</p>
-                <ul>
-                    <li><strong>Market Discovery Agent:</strong> Continuously scans information sources for tradeable events</li>
-                    <li><strong>Analysis Agents:</strong> Specialized by market type (political, crypto, sports) with domain-specific reasoning</li>
-                    <li><strong>Risk Assessment Agent:</strong> Quantitative gatekeeping to filter opportunities</li>
-                    <li><strong>Execution Agent:</strong> Manages position entry, monitoring, and exit</li>
-                </ul>
-                <p>Each agent operates with specific prompts and constraints, coordinated through an event-driven architecture that ensures efficient resource utilization and near-zero LLM costs through intelligent caching and decision thresholds.</p>
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <div class="metric-value">100-300%</div>
+                <div class="metric-label">Returns</div>
             </div>
-
-            <div class="info-box">
-                <h3>Hybrid Intelligence Framework</h3>
-                <p>The key innovation is the integration of statistical ML models with LLM reasoning:</p>
-                <ul>
-                    <li><strong>Bayesian Change Point Detection:</strong> Identifies significant shifts in market probability</li>
-                    <li><strong>Ensemble Time Series Forecasting:</strong> ARIMA + ML models provide probabilistic context</li>
-                    <li><strong>Cross-Timeframe Analysis:</strong> Multiple temporal resolutions for comprehensive market view</li>
-                    <li><strong>Statistical Context → LLM Decision:</strong> Rich quantitative data enables informed AI reasoning</li>
-                </ul>
+            <div class="metric-box">
+                <div class="metric-value">24/7</div>
+                <div class="metric-label">Autonomous</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">100s</div>
+                <div class="metric-label">Markets</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">$0.001</div>
+                <div class="metric-label">Cost/Decision</div>
             </div>
         </div>
 
-        <div class="methodology-section">
-            <h2>Implementation Details</h2>
-            
-            <div class="progression-stage">
-                <div class="stage-header">
-                    <span class="stage-number">Core Innovation:</span>
-                    <span class="stage-title">Market-Adaptive Agent Behavior</span>
-                </div>
-                
-                <p>The system implements a sophisticated categorization and routing mechanism:</p>
-                <ol>
-                    <li>Markets are categorized once upon discovery (political, crypto, sports, etc.)</li>
-                    <li>Trading logic bifurcates based on category for optimized strategies</li>
-                    <li>Different risk parameters and decision thresholds per category</li>
-                    <li>Agents self-optimize within their domains without cross-contamination</li>
-                </ol>
-                
-                <p>This approach dramatically reduces LLM costs while maintaining sophisticated reasoning capabilities where they matter most.</p>
-            </div>
-
-            <div class="progression-stage">
-                <div class="stage-header">
-                    <span class="stage-number">Technical Stack:</span>
-                    <span class="stage-title">Production-Ready Infrastructure</span>
-                </div>
-                
-                <div class="quote-highlight">
-                    <strong>Backend:</strong> Python (Asyncio, Pydantic), FastAPI for API layer<br>
-                    <strong>AI/ML:</strong> Claude/Perplexity APIs for LLM orchestration, Custom statistical models<br>
-                    <strong>Data Layer:</strong> Azure Cosmos DB for audit trail and state management<br>
-                    <strong>Frontend:</strong> React/Next.js dashboard for portfolio tracking and decision auditing<br>
-                    <strong>Real-time Processing:</strong> Event-driven architecture with message queuing
-                </div>
-            </div>
-
-            <div class="progression-stage">
-                <div class="stage-header">
-                    <span class="stage-number">Risk Management:</span>
-                    <span class="stage-title">Quantitative Gatekeeping</span>
-                </div>
-                
-                <p>Every trading decision passes through multiple filters:</p>
-                <ul>
-                    <li><strong>Statistical Significance:</strong> Bayesian change detection must exceed threshold</li>
-                    <li><strong>Ensemble Agreement:</strong> Multiple models must concur on opportunity</li>
-                    <li><strong>LLM Consensus:</strong> Specialized agents must reach agreement</li>
-                    <li><strong>Position Sizing:</strong> Kelly Criterion-based allocation with safety margins</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="technical-analysis">
-            <h2>Results & Performance</h2>
-            
-            <div class="vulnerability-diagram">
-                <h3>Key Achievements</h3>
-                <div class="flow-visualization">
-                    <p><strong>Financial Performance:</strong> Consistent 100-300% returns on identified opportunities through rigorous signal filtering</p>
-                    <p><strong>Operational Efficiency:</strong> Near-zero LLM costs (~$0.001 per decision) through intelligent orchestration</p>
-                    <p><strong>Scalability:</strong> Processes hundreds of markets simultaneously without human intervention</p>
-                    <p><strong>Reliability:</strong> 24/7 autonomous operation with comprehensive audit trail</p>
-                </div>
-            </div>
-
-            <div class="system-prompt-box">
-                <h3>Future Enhancements</h3>
-                <p>The system is designed for autonomous self-improvement:</p>
-                <ul>
-                    <li>Agents will self-optimize trading parameters based on performance data</li>
-                    <li>Reinforcement learning layer for strategy evolution</li>
-                    <li>Cross-market pattern recognition for new opportunity identification</li>
-                    <li>Automated A/B testing of agent configurations</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="implications-section">
-            <h2>Technical Insights</h2>
-            
-            <h3>Multi-Agent Orchestration Patterns</h3>
-            <ul>
-                <li><strong>Specialization Over Generalization:</strong> Domain-specific agents outperform general-purpose ones</li>
-                <li><strong>Statistical Context is Critical:</strong> LLMs make better decisions with rich quantitative input</li>
-                <li><strong>Cost-Aware Architecture:</strong> Strategic caching and thresholds enable production viability</li>
-                <li><strong>Audit Everything:</strong> Comprehensive logging enables continuous improvement</li>
+        <h2>Architecture</h2>
+        <div class="implementation-card">
+            <h4>Multi-Agent Orchestration</h4>
+            <p>The system employs specialized LLM agents for distinct cognitive tasks, each optimized for their specific domain:</p>
+            <ul class="feature-list">
+                <li>Market Discovery Agent continuously scans information sources for tradeable events</li>
+                <li>Analysis Agents specialized by market type (political, crypto, sports) with domain-specific reasoning</li>
+                <li>Risk Assessment Agent provides quantitative gatekeeping to filter opportunities</li>
+                <li>Execution Agent manages position entry, monitoring, and exit strategies</li>
             </ul>
+            <p>Agents coordinate through an event-driven architecture with intelligent caching and decision thresholds, achieving near-zero LLM costs while maintaining sophisticated reasoning.</p>
+        </div>
 
-            <h3>Lessons Learned</h3>
-            <p>Building production AI systems requires balancing sophistication with pragmatism. The key insights from Polybot's development:</p>
+        <div class="implementation-card">
+            <h4>Hybrid Intelligence Framework</h4>
+            <p>The key innovation is seamlessly integrating statistical ML models with LLM reasoning:</p>
+            <div class="tech-block">
+Statistical Models → Context Generation → LLM Decision Making
+├─ Bayesian Change Point Detection
+├─ Ensemble Time Series (ARIMA + ML)
+├─ Cross-Timeframe Probability Analysis
+└─ Rich Quantitative Context for AI</div>
+            <p>This approach enables LLMs to make informed decisions based on sophisticated statistical analysis rather than raw data interpretation.</p>
+        </div>
+
+        <h2>Technical Implementation</h2>
+        <div class="tech-stack">
+            <div class="tech-category">
+                <strong>Core Technologies</strong>
+                Python (Asyncio, Pydantic), FastAPI, Event-driven Architecture
+            </div>
+            <div class="tech-category">
+                <strong>AI/ML Stack</strong>
+                Claude/Perplexity APIs, Custom Statistical Models, Multi-Agent Orchestration
+            </div>
+            <div class="tech-category">
+                <strong>Infrastructure</strong>
+                Azure Cosmos DB, Real-time Data Processing, Message Queuing
+            </div>
+            <div class="tech-category">
+                <strong>Monitoring</strong>
+                React/Next.js Dashboard, Comprehensive Audit Trail, Decision Analytics
+            </div>
+        </div>
+
+        <h2>Key Innovations</h2>
+        <div class="results-grid">
+            <div class="result-card">
+                <h4>Market-Adaptive Behavior</h4>
+                <p>Markets categorized once upon discovery, then trading logic bifurcates based on category. Different risk parameters and decision thresholds optimize performance per market type.</p>
+            </div>
+            <div class="result-card">
+                <h4>Cost-Efficient LLM Usage</h4>
+                <p>Strategic caching and intelligent routing reduce LLM costs to ~$0.001 per decision while maintaining sophisticated reasoning where it matters most.</p>
+            </div>
+            <div class="result-card">
+                <h4>Autonomous Self-Improvement</h4>
+                <p>Designed for future autonomous optimization - agents will self-tune trading parameters based on performance data without human intervention.</p>
+            </div>
+        </div>
+
+        <h2>Risk Management</h2>
+        <p>Every trading decision passes through multiple validation layers:</p>
+        <ul class="feature-list">
+            <li>Statistical significance via Bayesian change detection thresholds</li>
+            <li>Ensemble model agreement requirements</li>
+            <li>Multi-agent consensus mechanisms</li>
+            <li>Kelly Criterion-based position sizing with safety margins</li>
+        </ul>
+
+        <h2>Insights</h2>
+        <div class="info-box">
+            <h3>Building Production AI Systems</h3>
+            <p>Polybot demonstrates that autonomous AI can operate profitably in complex domains when properly architected. Key learnings:</p>
             <ul>
-                <li>LLMs excel at nuanced reasoning when given proper context</li>
-                <li>Hybrid approaches (statistical + LLM) outperform either alone</li>
-                <li>Agent specialization dramatically improves both performance and cost</li>
-                <li>Autonomous systems must be designed for observability from day one</li>
+                <li><strong>Specialization beats generalization</strong> - Domain-specific agents outperform general-purpose ones</li>
+                <li><strong>Context is critical</strong> - LLMs make dramatically better decisions with rich quantitative input</li>
+                <li><strong>Observability from day one</strong> - Comprehensive logging enables continuous improvement</li>
+                <li><strong>Hybrid approaches win</strong> - Statistical + LLM systems outperform either alone</li>
             </ul>
         </div>
 
-        <div class="conclusion-section">
-            <h2>Impact</h2>
-            <p>Polybot demonstrates that autonomous AI systems can operate profitably in complex, real-world domains when properly architected. The combination of multi-agent orchestration, hybrid intelligence, and rigorous risk management creates a system that not only generates returns but does so in a scalable, observable manner.</p>
-            
-            <p>This project showcases practical applications of cutting-edge AI techniques including multi-agent systems, LLM orchestration, and hybrid statistical/neural approaches—all while maintaining production-level reliability and performance.</p>
-        </div>
-
-        <div style="margin-top: 60px; text-align: center;">
-            <a href="../index.html" style="color: #666; text-decoration: none;">← Back to Portfolio</a>
+        <div class="project-footer">
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
         </div>
     </div>
 </body>

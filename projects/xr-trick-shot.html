@@ -3,228 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XR Trick Shot: Vision Pro Launch Development - Michael Trifonov</title>
+    <title>XR Trick Shot - Michael Trifonov</title>
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../research/css/case-studies.css">
-    <style>
-        .timeline-box {
-            background: #f8f9fa;
-            border-left: 4px solid #2563eb;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .challenge-solution {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 20px 0;
-        }
-        
-        .challenge-box, .solution-box {
-            padding: 20px;
-            border-radius: 8px;
-        }
-        
-        .challenge-box {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-        }
-        
-        .solution-box {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-        }
-        
-        .physics-diagram {
-            background: #1f2937;
-            color: #e5e7eb;
-            padding: 20px;
-            border-radius: 8px;
-            font-family: 'JetBrains Mono', monospace;
-            margin: 20px 0;
-            overflow-x: auto;
-        }
-        
-        @media (max-width: 768px) {
-            .challenge-solution {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/projects.css">
 </head>
 <body>
-    <div class="case-study-container">
-        <div class="case-study-header">
-            <h1 class="case-study-title">XR Trick Shot: Vision Pro Launch Development</h1>
-            <p class="case-study-subtitle">Building Complex AR Physics on Day-One Platform Using AI-Assisted Development</p>
+    <div class="project-container">
+        <div class="project-header">
+            <h1 class="project-title">XR Trick Shot</h1>
+            <p class="project-subtitle">Vision Pro Launch Day Development</p>
         </div>
 
-        <div class="executive-summary">
-            <h2>Project Overview</h2>
-            <p><em>Built February - August 2024 | Sole Developer | Available on App Store</em></p>
-            <p>XR Trick Shot is a physics-based augmented reality game developed for Apple Vision Pro's launch day. What makes this project remarkable is that it was built entirely using AI assistance to navigate a brand-new platform with zero documentation, community resources, or prior AR/3D development experience. The result: one of the most technically sophisticated early Vision Pro applications, earning recognition as a top post in the Apple Vision Pro community.</p>
-            
-            <div class="key-findings">
-                <h3>Key Achievements:</h3>
-                <ul>
-                    <li><strong>Launch Day Development:</strong> Started development on Vision Pro announcement with no prior ARKit experience</li>
-                    <li><strong>AI-Driven Implementation:</strong> Used LLMs to navigate non-existent documentation and implement complex physics</li>
-                    <li><strong>Advanced Physics Engine:</strong> Custom velocity damping, convexCast collision prediction, multi-part geometry</li>
-                    <li><strong>4-Month Delivery:</strong> From zero AR experience to shipped App Store product</li>
-                </ul>
+        <div class="project-overview">
+            <div class="project-meta">
+                <span class="date">February - August 2024</span>
+                <span class="separator">•</span>
+                <span class="role">Sole Developer</span>
+                <span class="separator">•</span>
+                <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" style="color: #2563eb;">App Store</a>
             </div>
+            <p class="lead">Physics-based AR game built for Apple Vision Pro's launch day. Developed entirely using AI assistance to navigate a brand-new platform with zero documentation and no prior AR/3D experience. One of the most technically sophisticated early Vision Pro applications.</p>
         </div>
 
-        <div class="technical-context">
-            <h2>The Challenge: Building for Non-Existent Platform</h2>
-            
-            <div class="info-box">
-                <h3>The Vision Pro Documentation Problem</h3>
-                <p>When Apple announced Vision Pro, developers faced an unprecedented challenge:</p>
-                <ul>
-                    <li>No prior visionOS documentation existed</li>
-                    <li>LLMs had zero training data about the platform</li>
-                    <li>No Stack Overflow answers, GitHub examples, or community knowledge</li>
-                    <li>Apple's documentation was minimal and constantly changing</li>
-                </ul>
-                <p>This created a unique meta-problem: How do you use AI to build for a platform that AI doesn't know exists?</p>
+        <div class="metrics-grid">
+            <div class="metric-box">
+                <div class="metric-value">Day 1</div>
+                <div class="metric-label">Launch Development</div>
             </div>
-
-            <div class="timeline-box">
-                <h3>Development Timeline</h3>
-                <p><strong>February 2024:</strong> Vision Pro launches. Decision to build AR game despite zero 3D/AR experience</p>
-                <p><strong>March 2024:</strong> First working prototype using creative AI prompting strategies</p>
-                <p><strong>May 2024:</strong> Advanced physics implementation complete</p>
-                <p><strong>August 2024:</strong> App Store approval and launch</p>
+            <div class="metric-box">
+                <div class="metric-value">Zero</div>
+                <div class="metric-label">Prior AR Experience</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">4 Months</div>
+                <div class="metric-label">To App Store</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-value">Top Post</div>
+                <div class="metric-label">r/VisionPro</div>
             </div>
         </div>
 
-        <div class="methodology-section">
-            <h2>AI-Assisted Development Strategy</h2>
-            
-            <div class="progression-stage">
-                <div class="stage-header">
-                    <span class="stage-number">Innovation 1:</span>
-                    <span class="stage-title">Context Injection for Non-Existent Platforms</span>
-                </div>
-                
-                <p>Developed a novel approach to make AI understand Vision Pro without confusing it:</p>
-                
-                <div class="challenge-solution">
-                    <div class="challenge-box">
-                        <h4>❌ Challenge</h4>
-                        <p>LLMs would hallucinate iOS APIs or make up visionOS features that didn't exist</p>
-                    </div>
-                    <div class="solution-box">
-                        <h4>✅ Solution</h4>
-                        <p>Created "context sandwiches" - wrapping Apple's sparse docs with clarifying context before feeding to AI</p>
-                    </div>
-                </div>
-                
-                <div class="quote-highlight human-quote">
-                    <strong>Example Prompt Structure:</strong><br>
-                    "I'm working with Apple's new visionOS platform (not iOS). Here's the actual RealityKit documentation: [paste]. 
-                    Given these specific APIs, how would I implement velocity damping for a thrown object?"
-                </div>
-            </div>
-
-            <div class="progression-stage">
-                <div class="stage-header">
-                    <span class="stage-number">Innovation 2:</span>
-                    <span class="stage-title">Advanced Physics Through AI Partnership</span>
-                </div>
-                
-                <p>Implemented sophisticated physics systems that many experienced developers struggle with:</p>
-                
-                <div class="physics-diagram">
-// Custom Velocity Damping Implementation
-func applyVelocityDamping() {
-    // AI helped derive the mathematical model
-    let dampingFactor = 0.98
-    let velocityThreshold = 0.001
-    
-    // ConvexCast for predictive collision detection
-    let futurePosition = currentPos + velocity * deltaTime
-    let collision = physics.convexCast(from: currentPos, to: futurePosition)
-    
-    if let hit = collision {
-        // AI suggested this bounce calculation approach
-        velocity = reflect(velocity, normal: hit.normal) * restitution
-    }
-}
-                </div>
-                
-                <ul>
-                    <li><strong>ConvexCast Collision Prediction:</strong> Prevents objects from tunneling through surfaces at high speeds</li>
-                    <li><strong>Multi-Part Collision Geometry:</strong> Complex shapes with accurate physics boundaries</li>
-                    <li><strong>Hand Gesture Recognition:</strong> Translating raw tracking data into intuitive controls</li>
-                </ul>
-            </div>
-
-            <div class="progression-stage">
-                <div class="stage-header">
-                    <span class="stage-number">Innovation 3:</span>
-                    <span class="stage-title">Rapid Iteration Through AI Dialogue</span>
-                </div>
-                
-                <p>Developed a conversational debugging approach with AI:</p>
-                
-                <div class="quote-highlight">
-                    <strong>Human:</strong> "The ball is passing through the wall when thrown fast"<br>
-                    <strong>AI:</strong> "This is a classic tunneling problem. At high velocities, discrete collision detection fails. Try continuous collision with convexCast..."<br>
-                    <strong>Human:</strong> "convexCast doesn't exist in RealityKit"<br>
-                    <strong>AI:</strong> "You're right. In RealityKit, we need to implement our own continuous collision. Here's a ray-casting approach..."
-                </div>
-                
-                <p>This iterative dialogue pattern allowed rapid problem-solving despite platform limitations.</p>
-            </div>
-        </div>
-
-        <div class="technical-analysis">
-            <h2>Technical Implementation</h2>
-            
-            <div class="vulnerability-diagram">
-                <h3>Key Technical Features</h3>
-                <div class="flow-visualization">
-                    <div class="flow-box user">Spatial Hand Tracking</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-box claude">Gesture Recognition</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-box result">Physics Simulation</div>
-                    <div class="flow-arrow">→</div>
-                    <div class="flow-box final">AR Rendering</div>
-                </div>
-            </div>
-
-            <div class="system-prompt-box">
-                <h3>Technologies & Techniques</h3>
-                <ul>
-                    <li><strong>Swift:</strong> Entire application in Apple's modern language</li>
-                    <li><strong>RealityKit:</strong> 3D rendering and physics engine</li>
-                    <li><strong>ARKit:</strong> Spatial tracking and environment understanding</li>
-                    <li><strong>visionOS:</strong> Platform-specific APIs for Vision Pro</li>
-                    <li><strong>Custom Physics:</strong> Velocity damping, predictive collision detection</li>
-                    <li><strong>Spatial Computing:</strong> True 3D interaction in physical space</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="implications-section">
-            <h2>Insights & Learnings</h2>
-            
-            <h3>AI as a Learning Accelerator</h3>
-            <p>This project demonstrated that AI can enable developers to work far outside their expertise when used strategically:</p>
-            <ul>
-                <li><strong>Context is Everything:</strong> Carefully crafted prompts prevent AI hallucination</li>
-                <li><strong>Iterative Dialogue:</strong> Conversational debugging is faster than traditional methods</li>
-                <li><strong>Knowledge Synthesis:</strong> AI can combine concepts from related domains (iOS → visionOS)</li>
-                <li><strong>Confidence Building:</strong> AI partnership enables tackling "impossible" projects</li>
+        <h2>The Challenge</h2>
+        <div class="implementation-card">
+            <h4>Building for a Non-Existent Platform</h4>
+            <p>When Apple announced Vision Pro, developers faced unprecedented challenges:</p>
+            <ul class="feature-list">
+                <li>No visionOS documentation existed</li>
+                <li>LLMs had zero training data about the platform</li>
+                <li>No Stack Overflow, GitHub examples, or community knowledge</li>
+                <li>Apple's documentation was minimal and constantly changing</li>
             </ul>
+            <p>This created a unique meta-problem: How do you use AI to build for a platform that AI doesn't know exists?</p>
+        </div>
 
-            <h3>Platform Launch Strategy</h3>
-            <p>Being early on a new platform provides unique advantages:</p>
+        <h2>AI-Assisted Development Innovation</h2>
+        <div class="implementation-card">
+            <h4>Context Injection Strategy</h4>
+            <p>Developed novel approaches to make AI understand Vision Pro without confusion:</p>
+            <div class="tech-block">
+// Problem: LLMs would hallucinate iOS APIs or invent visionOS features
+
+// Solution: "Context Sandwiches"
+Prompt Structure:
+├─ Platform clarification ("visionOS, not iOS")
+├─ Actual Apple documentation snippet
+├─ Specific implementation question
+└─ Constraints and available APIs</div>
+            <p>This approach prevented hallucination while enabling AI to synthesize knowledge from related domains.</p>
+        </div>
+
+        <div class="implementation-card">
+            <h4>Advanced Physics Implementation</h4>
+            <p>Implemented sophisticated physics that many experienced developers struggle with:</p>
+            <ul class="feature-list">
+                <li><strong>ConvexCast Collision Prediction</strong> - Prevents high-speed object tunneling</li>
+                <li><strong>Custom Velocity Damping</strong> - Realistic physics feel with mathematical modeling</li>
+                <li><strong>Multi-Part Collision Geometry</strong> - Complex shapes with accurate boundaries</li>
+                <li><strong>Hand Gesture Recognition</strong> - Raw tracking data to intuitive controls</li>
+            </ul>
+        </div>
+
+        <h2>Technical Architecture</h2>
+        <div class="tech-stack">
+            <div class="tech-category">
+                <strong>Core Technologies</strong>
+                Swift, RealityKit, ARKit, visionOS SDK
+            </div>
+            <div class="tech-category">
+                <strong>3D & Physics</strong>
+                Custom Physics Engine, Spatial Computing, Collision Detection
+            </div>
+            <div class="tech-category">
+                <strong>Interaction Design</strong>
+                Hand Tracking, Gesture Recognition, Spatial UI
+            </div>
+            <div class="tech-category">
+                <strong>Development Approach</strong>
+                AI-Assisted Coding, Iterative Prototyping, Zero-to-Ship Pipeline
+            </div>
+        </div>
+
+        <h2>Development Timeline</h2>
+        <div class="results-grid">
+            <div class="result-card">
+                <h4>February 2024</h4>
+                <p>Vision Pro launches. Decision to build despite zero 3D/AR experience. Begin developing AI prompting strategies.</p>
+            </div>
+            <div class="result-card">
+                <h4>March 2024</h4>
+                <p>First working prototype. Core physics implementation. Breakthrough in AI-assisted visionOS development.</p>
+            </div>
+            <div class="result-card">
+                <h4>May 2024</h4>
+                <p>Advanced features complete. Gesture recognition, complex collision detection, gameplay polish.</p>
+            </div>
+            <div class="result-card">
+                <h4>August 2024</h4>
+                <p>App Store approval and launch. Recognition from Vision Pro community as standout technical achievement.</p>
+            </div>
+        </div>
+
+        <h2>Key Insights</h2>
+        <div class="info-box">
+            <h3>AI as a Learning Accelerator</h3>
+            <p>This project proved AI can enable developers to work far outside their expertise:</p>
             <ul>
+                <li><strong>Context is everything</strong> - Carefully crafted prompts prevent hallucination</li>
+                <li><strong>Iterative dialogue</strong> - Conversational debugging faster than traditional methods</li>
+                <li><strong>Knowledge synthesis</strong> - AI combines concepts from related domains effectively</li>
+                <li><strong>Confidence building</strong> - AI partnership enables tackling "impossible" projects</li>
+            </ul>
+        </div>
+
+        <div class="implementation-card">
+            <h4>Platform Launch Strategy</h4>
+            <p>Being early on new platforms provides unique advantages:</p>
+            <ul class="feature-list">
                 <li>Less competition for user attention</li>
                 <li>Apple featuring opportunities for quality apps</li>
                 <li>Community recognition for technical achievements</li>
@@ -232,19 +147,18 @@ func applyVelocityDamping() {
             </ul>
         </div>
 
-        <div class="conclusion-section">
-            <h2>Impact</h2>
-            <p>XR Trick Shot proves that the combination of human creativity and AI assistance can overcome seemingly impossible technical challenges. By developing novel prompting strategies and iterative dialogue patterns, I was able to build one of the most technically sophisticated Vision Pro launch applications without any prior AR/3D experience.</p>
-            
-            <p>The project stands as a testament to the power of AI-assisted development when applied creatively and strategically. It's not about AI replacing developers—it's about AI enabling developers to push far beyond their current boundaries.</p>
-            
-            <div style="margin-top: 40px; padding: 20px; background: #f0f9ff; border-radius: 8px; border: 1px solid #0ea5e9;">
-                <p style="margin: 0;"><strong>Available on App Store:</strong> <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" style="color: #0ea5e9;">Download XR Trick Shot</a></p>
-            </div>
+        <h2>Impact</h2>
+        <p>XR Trick Shot demonstrates that human creativity combined with AI assistance can overcome seemingly impossible technical challenges. The project stands as a testament to AI-assisted development - not replacing developers, but enabling them to push far beyond current boundaries.</p>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-radius: 12px; border: 1px solid #0ea5e9; text-align: center;">
+            <p style="margin: 0; font-size: 1.125rem;">
+                <strong>Available Now:</strong> 
+                <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" style="color: #0ea5e9; font-weight: 600;">Download on App Store</a>
+            </p>
         </div>
 
-        <div style="margin-top: 60px; text-align: center;">
-            <a href="../index.html" style="color: #666; text-decoration: none;">← Back to Portfolio</a>
+        <div class="project-footer">
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
         </div>
     </div>
 </body>
