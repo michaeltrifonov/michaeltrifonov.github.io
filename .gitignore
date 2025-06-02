@@ -5,3 +5,13 @@ node_modules/
 .cache
 dist/
 protected/*-source.html
+
+# Ignore unencrypted project pages
+projects/polybot-autonomous-trading.html
+projects/xr-trick-shot.html
+
+# Ignore encryption script (contains sensitive logic)
+projects/encrypt-pages.js
+
+# Ignore protected template (not needed in production)
+projects/protected-template.html
