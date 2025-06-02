@@ -64,7 +64,11 @@
                         <span class="tech-tag">visionOS</span>
                         <span class="tech-tag">Spatial Computing</span>
                     </div>
-                    <a href="/projects/xr-trick-shot.html" class="project-link">Read Case Study →</a>
+                    <div class="project-links">
+                        <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" class="project-link">App Store →</a>
+                        <span class="separator">•</span>
+                        <a href="/projects/xr-trick-shot.html" class="project-link">Case Study →</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -159,9 +163,17 @@
             if (link) {
                 card.style.cursor = 'pointer';
                 card.addEventListener('click', (e) => {
-                    // Don't navigate if clicking the actual link
-                    if (e.target.classList.contains('project-link')) {
+                    // Don't navigate if clicking the actual link or any link
+                    if (e.target.classList.contains('project-link') || e.target.closest('.project-link')) {
                         return;
+                    }
+                    // For XR Trick Shot, default to case study
+                    if (card.querySelector('.project-links')) {
+                        const caseStudyLink = card.querySelector('a[href*="/projects/"]');
+                        if (caseStudyLink) {
+                            window.location.href = caseStudyLink.href;
+                            return;
+                        }
                     }
                     window.location.href = link.href;
                 });

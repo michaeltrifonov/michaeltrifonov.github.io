@@ -236,6 +236,16 @@ body {
     text-decoration: underline;
 }
 
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project-links .separator {
+    color: var(--color-text-light);
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
