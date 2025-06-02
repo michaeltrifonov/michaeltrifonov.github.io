@@ -3,130 +3,720 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polybot - Michael Trifonov</title>
+    <title>Polybot: Autonomous AI Trading System - Michael Trifonov</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis',
+                nodeSpacing: 80,
+                rankSpacing: 100,
+                padding: 20
+            },
+            fontSize: 14,
+            securityLevel: 'loose'
+        });
+    </script>
+    <style>
+        /* Additional styles for improved formatting */
+        .code-snippet {
+            background: #2d2d2d;
+            border-radius: 8px;
+            margin: 1rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-snippet pre {
+            margin: 0;
+            padding: 1rem;
+        }
+        
+        .code-snippet code {
+            color: #f8f8f2;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            white-space: pre;
+            display: block;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .section-intro {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+        
+        .feature-highlight {
+            background: linear-gradient(to right, #f0f9ff, #e0f2fe);
+            border-left: 4px solid #0284c7;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .sub-feature {
+            background: #f8fafc;
+            padding: 1rem;
+            margin: 0.5rem 0 0.5rem 1rem;
+            border-radius: 6px;
+            border-left: 2px solid #cbd5e1;
+        }
+        
+        .mermaid {
+            margin: 2rem 0;
+        }
+        
+        .code-reference {
+            font-family: monospace;
+            background: #e5e7eb;
+            padding: 0.1rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+        
+        /* Fix bullet formatting */
+        .implementation-card ul,
+        .feature-highlight ul,
+        .sub-feature ul,
+        .info-box ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+            list-style-position: outside;
+        }
+        
+        .implementation-card li,
+        .feature-highlight li,
+        .sub-feature li,
+        .info-box li {
+            margin: 0.6rem 0;
+            line-height: 1.7;
+            list-style-type: disc;
+            padding-left: 0.25rem;
+        }
+        
+        .implementation-card ul li::marker,
+        .feature-highlight ul li::marker,
+        .sub-feature ul li::marker {
+            color: #0284c7;
+            font-size: 1.2em;
+        }
+        
+        /* Improve strong tags in lists */
+        .implementation-card li strong,
+        .feature-highlight li strong,
+        .sub-feature li strong,
+        .info-box li strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        /* Ensure proper nesting */
+        .sub-feature ul {
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+        }
+        
+        .sub-feature ul li {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
+        
+        /* Make charts larger and more readable */
+        .mermaid {
+            margin: 2rem 0;
+            min-height: 400px;
+            text-align: center;
+        }
+        
+        /* Improve paragraph spacing */
+        .implementation-card p,
+        .feature-highlight p {
+            margin: 0.75rem 0;
+            line-height: 1.7;
+            color: #374151;
+        }
+        
+        /* Clean up overall text appearance */
+        p {
+            line-height: 1.7;
+        }
+        
+        /* Adjust title sizing */
+        .project-title {
+            font-size: 2.25rem !important;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+        
+        .project-container {
+            max-width: 1100px !important;
+        }
+        
+        @media (max-width: 1400px) {
+            .project-title {
+                font-size: 2rem !important;
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .metrics-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="project-container">
         <div class="project-header">
-            <h1 class="project-title">Polybot</h1>
-            <p class="project-subtitle">Autonomous Multi-Agent Trading System</p>
+            <h1 class="project-title">Polybot: Autonomous AI Trading System</h1>
+            <p class="project-subtitle">Production Multi-Agent Architecture for Real-Time Prediction Markets</p>
         </div>
 
         <div class="project-overview">
             <div class="project-meta">
                 <span class="date">January 2025 - Present</span>
                 <span class="separator">•</span>
-                <span class="role">Sole Developer</span>
+                <span class="role">Sole Developer & System Architect</span>
+                <span class="separator">•</span>
+                <span class="status">Live & Actively Trading</span>
             </div>
-            <p class="lead">Fully autonomous trading system leveraging multi-agent LLM orchestration to identify and exploit prediction market inefficiencies. Processes real-time feeds across hundreds of markets with complete autonomous operation from discovery through position closure.</p>
+            
+            <p class="lead" style="max-width: none;">
+                Architected and deployed <strong>Polybot</strong>, a fully autonomous Python-based AI trading system featuring a sophisticated multi-agent architecture. The system leverages specialized LLMs—Claude 3.7 Sonnet for decision synthesis and Perplexity AI for real-time web research—integrated with a robust quantitative analysis pipeline.
+            </p>
+            
+            <p class="lead" style="max-width: none;">
+                Operating 24/7, Polybot autonomously manages the complete trading lifecycle: from market discovery through multi-stage analysis to trade execution and intelligent exit strategies. All operations are meticulously logged to Azure Cosmos DB, powering the monitoring platform for comprehensive observability and continuous improvement.
+            </p>
         </div>
 
-        <div class="metrics-grid">
-            <div class="metric-box">
-                <div class="metric-value">100-300%</div>
+        <div class="metrics-grid" style="grid-template-columns: repeat(4, 1fr); gap: 1rem;">
+            <div class="metric-box" style="height: 120px;">
+                <div class="metric-value" style="font-size: 2rem;">100-300%</div>
                 <div class="metric-label">Returns</div>
             </div>
-            <div class="metric-box">
-                <div class="metric-value">24/7</div>
+            <div class="metric-box" style="height: 120px;">
+                <div class="metric-value" style="font-size: 2rem;">Optimized</div>
+                <div class="metric-label">LLM Costs</div>
+            </div>
+            <div class="metric-box" style="height: 120px;">
+                <div class="metric-value" style="font-size: 2rem;">24/7</div>
                 <div class="metric-label">Autonomous</div>
             </div>
-            <div class="metric-box">
-                <div class="metric-value">100s</div>
+            <div class="metric-box" style="height: 120px;">
+                <div class="metric-value" style="font-size: 2rem;">100s</div>
                 <div class="metric-label">Markets</div>
             </div>
-            <div class="metric-box">
-                <div class="metric-value">$0.001</div>
-                <div class="metric-label">Cost/Decision</div>
-            </div>
         </div>
 
-        <h2>Architecture</h2>
+        <h2>System Architecture</h2>
+        <p class="section-intro">
+            Polybot employs a modular, event-driven architecture built on Python's asyncio framework, enabling high-performance concurrent operations across hundreds of markets.
+        </p>
+
+        <div class="mermaid" style="background: #f9fafb; padding: 2rem; border-radius: 12px; min-height: 500px;">
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '16px', 'primaryColor': '#e6f7ff', 'primaryTextColor': '#000', 'primaryBorderColor': '#007bff', 'lineColor': '#333'}}}%%
+graph TD
+    subgraph UI["<b>User Interface</b>"]
+        Monitor_UI["<b>Monitoring UI</b><br/>Next.js/React"]
+    end
+
+    subgraph API["<b>Backend Services</b>"]
+        Monitor_API["<b>Monitoring API</b><br/>FastAPI"]
+    end
+
+    subgraph Core["<b>Core Trading System</b>"]
+        PolybotCore["<b>Polybot Core</b><br/>Python/Asyncio"]
+        StrategyManager["<b>Strategy Manager</b>"]
+        GenericStrategy["<b>Generic Strategy</b>"]
+        MarketAnalyzer["<b>Market Analyzer</b>"]
+        PositionManager["<b>Position Manager</b>"]
+        PersistenceService["<b>Persistence Service</b>"]
+    end
+
+    subgraph External["<b>External Services</b>"]
+        PolymarketAPIs["<b>Polymarket APIs</b><br/>Gamma & CLOB"]
+        LLM_Perplexity["<b>Perplexity AI</b><br/>Web Research"]
+        LLM_Claude["<b>Claude 3.7</b><br/>Decision Synthesis"]
+    end
+
+    subgraph Storage["<b>Data Storage</b>"]
+        CosmosDB["<b>Azure Cosmos DB</b><br/>Artifact Store"]
+        LocalCache["<b>Local Cache</b><br/>Positions/Prices"]
+    end
+
+    Monitor_UI --> Monitor_API
+    Monitor_API --> CosmosDB
+    
+    PolybotCore --> StrategyManager
+    StrategyManager --> GenericStrategy
+    GenericStrategy --> MarketAnalyzer
+    GenericStrategy --> LLM_Perplexity
+    GenericStrategy --> LLM_Claude
+    GenericStrategy --> PositionManager
+    PositionManager --> PolymarketAPIs
+    MarketAnalyzer --> PolymarketAPIs
+    
+    PolybotCore --> PersistenceService
+    PersistenceService --> CosmosDB
+    PolybotCore --> LocalCache
+
+    style PolybotCore fill:#e6f7ff,stroke:#007bff,stroke-width:3px
+    style Monitor_API fill:#e6ffe6,stroke:#28a745,stroke-width:3px
+    style Monitor_UI fill:#fff0e6,stroke:#fd7e14,stroke-width:3px
+    style CosmosDB fill:#f0e6ff,stroke:#6f42c1,stroke-width:3px
+    style PolymarketAPIs fill:#ffffe0,stroke:#ffc107,stroke-width:3px
+        </div>
+
+        <h2>Core Trading Engine</h2>
+        <p class="section-intro">
+            The Polybot core engine orchestrates autonomous trading through a sophisticated pipeline that combines quantitative analysis with AI-powered decision making.
+        </p>
+
         <div class="implementation-card">
-            <h4>Multi-Agent Orchestration</h4>
-            <p>The system employs specialized LLM agents for distinct cognitive tasks, each optimized for their specific domain:</p>
-            <ul class="feature-list">
-                <li>Market Discovery Agent continuously scans information sources for tradeable events</li>
-                <li>Analysis Agents specialized by market type (political, crypto, sports) with domain-specific reasoning</li>
-                <li>Risk Assessment Agent provides quantitative gatekeeping to filter opportunities</li>
-                <li>Execution Agent manages position entry, monitoring, and exit strategies</li>
+            <h4>Entry Points & Architecture</h4>
+            <div class="code-snippet">
+<pre><code class="language-python"># Main entry point (polybots/main.py)
+async def main():
+    """Initialize and run the trading bot"""
+    config = load_config()
+    persistence = PersistenceService(config)
+    strategy_manager = StrategyManager(config, persistence)
+    
+    # Graceful shutdown handling
+    signal.signal(signal.SIGINT, shutdown_handler)
+    
+    await strategy_manager.run()</code></pre>
+            </div>
+            <p>Key architectural components:</p>
+            <ul>
+                <li><code class="code-reference">polybots/app.py</code>: Core orchestration logic</li>
+                <li><code class="code-reference">strategies/strategy_manager.py</code>: Strategy lifecycle management</li>
+                <li><code class="code-reference">utils/persistence.py</code>: Azure Cosmos DB integration</li>
+                <li><code class="code-reference">cache/positions/latest.json</code>: State recovery mechanism</li>
             </ul>
-            <p>Agents coordinate through an event-driven architecture with intelligent caching and decision thresholds, achieving near-zero LLM costs while maintaining sophisticated reasoning.</p>
         </div>
 
         <div class="implementation-card">
-            <h4>Hybrid Intelligence Framework</h4>
-            <p>The key innovation is seamlessly integrating statistical ML models with LLM reasoning:</p>
-            <div class="tech-block">
-Statistical Models → Context Generation → LLM Decision Making
-├─ Bayesian Change Point Detection
-├─ Ensemble Time Series (ARIMA + ML)
-├─ Cross-Timeframe Probability Analysis
-└─ Rich Quantitative Context for AI</div>
-            <p>This approach enables LLMs to make informed decisions based on sophisticated statistical analysis rather than raw data interpretation.</p>
+            <h4>Hybrid Intelligence Trading Strategy</h4>
+            <p>The <code class="code-reference">GenericStrategy</code> implements a sophisticated multi-stage decision pipeline:</p>
+            
+            <div class="feature-highlight">
+                <strong>1. Market Discovery & Pre-analysis</strong>
+                <p>Fetches markets via GammaAPI, converts to Pydantic models, and pre-fetches order book data with intelligent caching.</p>
+            </div>
+
+            <div class="feature-highlight">
+                <strong>2. Quantitative Gating Pipeline</strong>
+                <p>A suite of specialized analyzers rigorously vet markets before LLM interaction:</p>
+                
+                <div class="sub-feature">
+                    <strong>PriceAnalyzer</strong>
+                    <ul>
+                        <li>Detects arbitrage opportunities (Dutch books)</li>
+                        <li>Calculates market efficiency using Shannon entropy</li>
+                        <li>Identifies pricing inefficiencies</li>
+                    </ul>
+                </div>
+
+                <div class="sub-feature">
+                    <strong>TimeSeriesAnalyzer</strong>
+                    <ul>
+                        <li>Ensemble forecasting: ARIMA, Moving Averages, Linear Regression, EWMA</li>
+                        <li>Dynamic ARIMA order selection based on data characteristics</li>
+                        <li>Bayesian change point detection</li>
+                        <li>Probability distribution shape analysis (skewness, kurtosis)</li>
+                        <li>Cross-timeframe probability analysis</li>
+                    </ul>
+                </div>
+
+                <div class="sub-feature">
+                    <strong>LiquidityAnalyzer</strong>
+                    <ul>
+                        <li>Order book microstructure analysis</li>
+                        <li>Informed trading pattern detection</li>
+                        <li>Market impact assessment</li>
+                        <li>Effective liquidity calculation</li>
+                    </ul>
+                </div>
+
+                <div class="sub-feature">
+                    <strong>AnomalyDetector</strong>
+                    <ul>
+                        <li>Isolation Forest on price, momentum, volatility features</li>
+                        <li>Information-adjusted volatility metrics</li>
+                    </ul>
+                </div>
+
+                <div class="sub-feature">
+                    <strong>PositionSizer</strong>
+                    <ul>
+                        <li>Multi-factor adjusted Kelly Criterion</li>
+                        <li>Dynamic risk adjustment based on market conditions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="feature-highlight">
+                <strong>3. AI-Powered Research & Decision Making</strong>
+                <p>If quantitative analysis passes:</p>
+                <ul>
+                    <li><strong>Perplexity AI:</strong> Conducts time-sensitive web research via <code class="code-reference">api/openai.py</code></li>
+                    <li><strong>Claude 3.7 Sonnet:</strong> Synthesizes findings for final trade decision via <code class="code-reference">api/anthropic.py</code></li>
+                    <li>Structured output using tool-calling for reliability</li>
+                </ul>
+            </div>
+
+            <h4 style="margin-top: 2.5rem; margin-bottom: 1.5rem; font-size: 1.5rem; text-align: center; color: #1f2937;">Hybrid Intelligence Data Flow</h4>
+            <div class="mermaid" style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; min-height: 400px;">
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '12px', 'primaryColor': '#e6f7ff'}, 'flowchart': {'nodeSpacing': 30, 'rankSpacing': 40, 'padding': 8}}}%%
+graph TD
+    A["<b>Market Discovery</b>"] --> B["<b>Pydantic Models</b>"]
+    B --> C["<b>Persist Artifacts</b>"]
+    B --> D["<b>Prefetch Data</b>"]
+    
+    D --> E["<b>Quantitative Analysis</b>"]
+    E --> F{"<b>Pass Quant Filters?</b>"}
+    
+    F -->|Yes| G["<b>Generate Research</b>"]
+    F -->|No| N["<b>Discard Market</b>"]
+    
+    G --> H["<b>Perplexity AI</b><br/>Web Research"]
+    H --> I["<b>Claude 3.7</b><br/>Decision Synthesis"]
+    I --> J{"<b>Trade Decision?</b>"}
+    
+    J -->|Yes| K["<b>Calculate EROC</b>"]
+    J -->|No| N
+    
+    K --> L["<b>Execute Trade</b>"]
+    L --> M["<b>Monitor Position</b>"]
+
+    style A fill:#e6f7ff,stroke:#007bff,stroke-width:3px
+    style E fill:#e6f7ff,stroke:#007bff,stroke-width:3px
+    style H fill:#ffffe0,stroke:#ffc107,stroke-width:3px
+    style I fill:#ffffe0,stroke:#ffc107,stroke-width:3px
+    style L fill:#e6ffe6,stroke:#28a745,stroke-width:3px
+    style M fill:#e6ffe6,stroke:#28a745,stroke-width:3px
+    style F fill:#fff0e6,stroke:#fd7e14,stroke-width:3px
+    style J fill:#fff0e6,stroke:#fd7e14,stroke-width:3px
+    style N fill:#ffcccc,stroke:#dc3545,stroke-width:3px
+            </div>
         </div>
 
-        <h2>Technical Implementation</h2>
-        <div class="tech-stack">
-            <div class="tech-category">
-                <strong>Core Technologies</strong>
-                Python (Asyncio, Pydantic), FastAPI, Event-driven Architecture
+        <div class="implementation-card">
+            <h4>Advanced Position Management</h4>
+            <p>The <code class="code-reference">PositionManager</code> handles the complete trade lifecycle:</p>
+
+            <div class="feature-highlight">
+                <strong>Order Execution</strong>
+                <div class="code-snippet">
+<pre><code class="language-python"># OrderExecutor.py - Thread-safe order execution
+async def execute_order(self, order: Order) -> ExecutionResult:
+    # Run blocking py_clob_client in separate thread
+    result = await asyncio.to_thread(
+        self.clob_client.execute,
+        order.to_clob_format()
+    )
+    return ExecutionResult.from_clob(result)</code></pre>
+                </div>
             </div>
-            <div class="tech-category">
-                <strong>AI/ML Stack</strong>
-                Claude/Perplexity APIs, Custom Statistical Models, Multi-Agent Orchestration
+
+            <div class="feature-highlight">
+                <strong>Dynamic Exit Strategies</strong>
+                <p>Multi-factor exit evaluation with optional LLM enhancement:</p>
+                <ul>
+                    <li>Expected Value (EV) ratio with price compression adjustments</li>
+                    <li>Information persistence modeling (signal decay)</li>
+                    <li>Market category-specific parameters (Political, Crypto, etc.)</li>
+                    <li>Time decay urgency based on resolution proximity</li>
+                    <li>Optional LLM-enhanced exits for breaking news reactions</li>
+                </ul>
             </div>
-            <div class="tech-category">
-                <strong>Infrastructure</strong>
-                Azure Cosmos DB, Real-time Data Processing, Message Queuing
-            </div>
-            <div class="tech-category">
-                <strong>Monitoring</strong>
-                React/Next.js Dashboard, Comprehensive Audit Trail, Decision Analytics
+
+            <div class="feature-highlight">
+                <strong>Continuous Monitoring</strong>
+                <p>Background asyncio tasks continuously re-evaluate positions:</p>
+                <ul>
+                    <li>Real-time market data updates</li>
+                    <li>Exit condition checking</li>
+                    <li>State persistence for fault tolerance</li>
+                    <li>Comprehensive monitoring cycle artifacts</li>
+                </ul>
             </div>
         </div>
 
-        <h2>Key Innovations</h2>
+        <div class="implementation-card">
+            <h4>Position Monitoring & Exit Architecture</h4>
+            <p>The system continuously monitors active positions through a sophisticated exit decision framework:</p>
+
+            <div class="mermaid" style="background: #f9fafb; padding: 1.5rem; border-radius: 12px; min-height: 400px;">
+%%{init: {'theme':'base', 'themeVariables': { 'fontSize': '12px', 'primaryColor': '#e6f7ff'}, 'flowchart': {'nodeSpacing': 30, 'rankSpacing': 40, 'padding': 8}}}%%
+graph TD
+    A["<b>Monitor Cycle Start</b><br/>Every 60s"] --> B["<b>Fetch Active Positions</b>"]
+    B --> C["<b>Update Orders</b>"]
+    C --> D["<b>Fetch Market Data</b>"]
+    D --> E["<b>Re-analyze Markets</b>"]
+    
+    E --> F{"<b>For Each Position</b>"}
+    F --> G{"<b>Basic Exit?</b><br/>Stop Loss / Take Profit"}
+    
+    G -->|Yes| H["<b>Execute Exit</b>"]
+    G -->|No| I["<b>Advanced Exit Model</b><br/>EV • Info Decay • Signals • Time"]
+    
+    I --> J{"<b>Exit Score < Threshold?</b>"}
+    J -->|Yes| K{"<b>LLM Enhancement?</b>"}
+    J -->|No| L["<b>Hold Position</b>"]
+    
+    K -->|Enabled| M["<b>Perplexity Research</b>"]
+    M --> N["<b>Claude Analysis</b>"]
+    N --> O{"<b>Override Decision?</b>"}
+    
+    O -->|Exit| H
+    O -->|Hold| L
+    K -->|Disabled| H
+    
+    H --> P["<b>Close Position</b><br/>via CLOB API"]
+    L --> Q["<b>Continue Monitoring</b>"]
+    
+    style A fill:#e6f7ff,stroke:#007bff,stroke-width:2px
+    style G fill:#fff0e6,stroke:#fd7e14,stroke-width:2px
+    style J fill:#fff0e6,stroke:#fd7e14,stroke-width:2px
+    style K fill:#fff0e6,stroke:#fd7e14,stroke-width:2px
+    style O fill:#fff0e6,stroke:#fd7e14,stroke-width:2px
+    style M fill:#ffffe0,stroke:#ffc107,stroke-width:2px
+    style N fill:#ffffe0,stroke:#ffc107,stroke-width:2px
+    style H fill:#ffe6e6,stroke:#dc3545,stroke-width:2px
+    style P fill:#ffe6e6,stroke:#dc3545,stroke-width:2px
+    style L fill:#e6ffe6,stroke:#28a745,stroke-width:2px
+    style Q fill:#e6ffe6,stroke:#28a745,stroke-width:2px
+            </div>
+
+            <div class="feature-highlight">
+                <strong>Exit Model Components</strong>
+                <ul>
+                    <li><strong>Expected Value Ratio:</strong> Price compression-adjusted EV calculations</li>
+                    <li><strong>Information Persistence:</strong> Models signal decay over time</li>
+                    <li><strong>Signal Consistency:</strong> Compares current vs. entry signals</li>
+                    <li><strong>Time Decay:</strong> Urgency based on market resolution</li>
+                    <li><strong>Market Categories:</strong> Political, Crypto, Sports (via Claude)</li>
+                </ul>
+            </div>
+
+            <div class="feature-highlight">
+                <strong>Monitoring Artifacts</strong>
+                <p>Every monitoring cycle persists detailed artifacts for analysis:</p>
+                <ul>
+                    <li><code class="code-reference">MonitorCycleStart</code>: Cycle initiation metadata</li>
+                    <li><code class="code-reference">PositionStateSnapshot</code>: Position states at key stages</li>
+                    <li><code class="code-reference">PositionExitEvaluation</code>: Exit decision details</li>
+                    <li><code class="code-reference">LLMExitPrompt/Response</code>: AI consultation records</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="implementation-card">
+            <h4>Data Persistence Architecture</h4>
+            <p>The <code class="code-reference">PersistenceService</code> ensures complete auditability:</p>
+
+            <div class="code-snippet">
+<pre><code class="language-python"># Example artifact persistence
+async def persist_artifact(self, artifact: BaseModel):
+    """Persist Pydantic model to Cosmos DB with validation"""
+    # Validate against shared schema
+    validated = self.validate_schema(artifact)
+    
+    # Generate structured ID
+    artifact_id = self.generate_artifact_id(
+        type=artifact.__class__.__name__,
+        market_id=getattr(artifact, 'market_id', None),
+        stage=getattr(artifact, 'stage', 'default')
+    )
+    
+    # Enrich with metadata
+    enriched = self.enrich_metadata(validated, artifact_id)
+    
+    # Save to Cosmos DB with retry logic
+    await self.cosmos_client.upsert_item(enriched)</code></pre>
+            </div>
+
+            <ul>
+                <li><strong>Azure Cosmos DB:</strong> NoSQL document store for all trading artifacts</li>
+                <li><strong>Schema Validation:</strong> Shared Pydantic models via <code class="code-reference">polybots_shared</code></li>
+                <li><strong>Structured IDs:</strong> Queryable artifact identification system</li>
+                <li><strong>Retry Logic:</strong> Exponential backoff for rate limiting</li>
+            </ul>
+        </div>
+
+        <h2>Monitoring Platform</h2>
+        <p class="section-intro">
+            The monitoring platform provides comprehensive observability into Polybot's operations through a modern web interface backed by a high-performance API.
+        </p>
+
+        <div class="implementation-card">
+            <h4>Monitoring API (FastAPI)</h4>
+            <p>RESTful API for querying and analyzing trading artifacts:</p>
+
+            <div class="code-snippet">
+<pre><code class="language-python"># Artifact endpoint with dynamic querying
+@router.get("/artifacts/{artifact_type}")
+async def list_artifacts(
+    artifact_type: str,
+    market_id: Optional[str] = None,
+    start_time: Optional[datetime] = None,
+    end_time: Optional[datetime] = None,
+    limit: int = 100
+):
+    query = build_cosmos_query(
+        artifact_type=artifact_type,
+        filters={
+            "market_id": market_id,
+            "timestamp": {"$gte": start_time, "$lte": end_time}
+        }
+    )
+    
+    results = await cosmos_client.query_items(query, limit=limit)
+    return {"artifacts": results, "count": len(results)}</code></pre>
+            </div>
+
+            <ul>
+                <li>Dynamic Cosmos DB query construction</li>
+                <li>Partition key optimization for performance</li>
+                <li>API key authentication</li>
+                <li>Comprehensive filtering capabilities</li>
+            </ul>
+        </div>
+
+        <div class="implementation-card">
+            <h4>Monitoring UI (Next.js/React)</h4>
+            <p>Interactive dashboard for real-time monitoring:</p>
+
+            <ul>
+                <li><strong>Market Timeline:</strong> Chronological view of all artifacts for a market</li>
+                <li><strong>Position Lifecycle:</strong> Complete trade history visualization</li>
+                <li><strong>Artifact Comparison:</strong> Side-by-side analysis tools</li>
+                <li><strong>Performance Analytics:</strong> Returns, win rate, and strategy metrics</li>
+            </ul>
+
+            <div class="feature-highlight">
+                <strong>Tech Stack</strong>
+                <ul>
+                    <li>Next.js 14 with App Router</li>
+                    <li>React 18+ with TypeScript</li>
+                    <li>TanStack Query for data fetching</li>
+                    <li>Tailwind CSS for responsive design</li>
+                    <li>Recharts for data visualization</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Technical Architecture Summary</h2>
+        <div class="tech-stack" style="display: grid; gap: 0;">
+            <div class="tech-category" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0.75rem;">
+                <strong style="display: block; margin-bottom: 0.25rem; font-size: 1rem;">Core Trading Engine</strong>
+                <p style="margin: 0; color: #6b7280; line-height: 1.4; font-size: 0.875rem;">Python 3.9+ • Asyncio • Pydantic V2 • Structured Logging • Multi-Stage LLM Orchestration • Quantitative Analysis Suite • Strategy Pattern Architecture</p>
+            </div>
+            <div class="tech-category" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0.75rem;">
+                <strong style="display: block; margin-bottom: 0.25rem; font-size: 1rem;">AI Integration</strong>
+                <p style="margin: 0; color: #6b7280; line-height: 1.4; font-size: 0.875rem;">Claude 3.7 Sonnet (Decision Synthesis) • Perplexity AI (Web Research) • Tool-Calling for Structured Output • Cost-Optimized Prompting</p>
+            </div>
+            <div class="tech-category" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0.75rem;">
+                <strong style="display: block; margin-bottom: 0.25rem; font-size: 1rem;">Data Infrastructure</strong>
+                <p style="margin: 0; color: #6b7280; line-height: 1.4; font-size: 0.875rem;">Azure Cosmos DB • Schema Validation • Structured Artifact IDs • Local State Caching • Price History Cache</p>
+            </div>
+            <div class="tech-category" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0.75rem;">
+                <strong style="display: block; margin-bottom: 0.25rem; font-size: 1rem;">Monitoring & Analytics</strong>
+                <p style="margin: 0; color: #6b7280; line-height: 1.4; font-size: 0.875rem;">FastAPI Backend • Next.js Frontend • Real-time Dashboards • Comprehensive Artifact Querying</p>
+            </div>
+            <div class="tech-category" style="background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 0.75rem;">
+                <strong style="display: block; margin-bottom: 0.25rem; font-size: 1rem;">Market Integration</strong>
+                <p style="margin: 0; color: #6b7280; line-height: 1.4; font-size: 0.875rem;">Polymarket APIs (Gamma & CLOB) • py_clob_client • web3.py • Polygon Network</p>
+            </div>
+        </div>
+
+        <h2>Key Technical Achievements</h2>
         <div class="results-grid">
             <div class="result-card">
-                <h4>Market-Adaptive Behavior</h4>
-                <p>Markets categorized once upon discovery, then trading logic bifurcates based on category. Different risk parameters and decision thresholds optimize performance per market type.</p>
+                <h4>Advanced Quantitative Modeling</h4>
+                <p>Ensemble forecasting, Bayesian change detection, microstructure analysis, and adaptive risk management create a sophisticated market analysis framework.</p>
             </div>
             <div class="result-card">
-                <h4>Cost-Efficient LLM Usage</h4>
-                <p>Strategic caching and intelligent routing reduce LLM costs to ~$0.001 per decision while maintaining sophisticated reasoning where it matters most.</p>
+                <h4>Hybrid Intelligence Architecture</h4>
+                <p>Seamlessly integrates quantitative analysis with multi-agent LLM reasoning for context-aware decisions and dynamic strategy adaptation.</p>
             </div>
             <div class="result-card">
-                <h4>Autonomous Self-Improvement</h4>
-                <p>Designed for future autonomous optimization - agents will self-tune trading parameters based on performance data without human intervention.</p>
+                <h4>Production-Grade Autonomy</h4>
+                <p>24/7 operation with robust error handling, state persistence, graceful shutdown, and comprehensive monitoring capabilities.</p>
+            </div>
+            <div class="result-card">
+                <h4>Cost-Optimized AI Utilization</h4>
+                <p>Quantitative gating ensures LLMs process only high-potential opportunities, reducing costs while preserving AI capabilities.</p>
+            </div>
+            <div class="result-card">
+                <h4>Complete Observability</h4>
+                <p>Every decision, analysis, and state change is logged as validated artifacts, enabling deep debugging and continuous improvement.</p>
+            </div>
+            <div class="result-card">
+                <h4>Scalable Architecture</h4>
+                <p>Async design enables concurrent analysis of hundreds of markets with efficient resource utilization and minimal latency.</p>
             </div>
         </div>
 
-        <h2>Risk Management</h2>
-        <p>Every trading decision passes through multiple validation layers:</p>
-        <ul class="feature-list">
-            <li>Statistical significance via Bayesian change detection thresholds</li>
-            <li>Ensemble model agreement requirements</li>
-            <li>Multi-agent consensus mechanisms</li>
-            <li>Kelly Criterion-based position sizing with safety margins</li>
-        </ul>
-
-        <h2>Insights</h2>
+        <h2>Engineering Approach</h2>
         <div class="info-box">
-            <h3>Building Production AI Systems</h3>
-            <p>Polybot demonstrates that autonomous AI can operate profitably in complex domains when properly architected. Key learnings:</p>
+            <h3>Autonomous AI at Scale</h3>
+            <p>Key architectural decisions that enable reliable 24/7 operation:</p>
             <ul>
-                <li><strong>Specialization beats generalization</strong> - Domain-specific agents outperform general-purpose ones</li>
-                <li><strong>Context is critical</strong> - LLMs make dramatically better decisions with rich quantitative input</li>
-                <li><strong>Observability from day one</strong> - Comprehensive logging enables continuous improvement</li>
-                <li><strong>Hybrid approaches win</strong> - Statistical + LLM systems outperform either alone</li>
+                <li><strong>Multi-Agent Orchestration:</strong> Specialized LLMs for research vs. decision synthesis, with quantitative gating to optimize costs</li>
+                <li><strong>Comprehensive Observability:</strong> Every decision logged as validated artifacts, enabling debugging and continuous improvement</li>
+                <li><strong>Fault-Tolerant Design:</strong> State persistence, graceful shutdown handling, and automatic recovery mechanisms</li>
+                <li><strong>Hybrid Intelligence:</strong> Quantitative models filter opportunities before expensive LLM calls</li>
+                <li><strong>Structured AI Outputs:</strong> Tool-calling ensures reliable, parseable responses from LLMs</li>
+                <li><strong>Modular Architecture:</strong> Clean separation of concerns enables rapid iteration and testing</li>
             </ul>
+        </div>
+        
+        <div class="info-box" style="background: #f0fdf4; border-color: #22c55e;">
+            <h3>Ready to Discuss Technical Challenges</h3>
+            <p>This project represents deep expertise in autonomous AI systems operating in complex, real-world environments. I'm eager to discuss architectural decisions, AI integration strategies, data engineering approaches, and the practical challenges of deploying such systems.</p>
+        </div>
+
+        <div style="margin-top: 2rem; padding: 1.5rem; background: #f0f9ff; border-radius: 12px; border: 1px solid #0ea5e9; text-align: center;">
+            <p style="margin: 0; font-size: 1.125rem;">
+                <strong>Status:</strong> Live & Trading
+                <span style="margin: 0 1rem;">•</span>
+                <strong>Returns:</strong> 100-300% ROI
+                <span style="margin: 0 1rem;">•</span>
+                <strong>Scale:</strong> 100s of Markets Daily
+            </p>
         </div>
 
         <div class="project-footer">
             <a href="../index.html" class="back-link">← Back to Portfolio</a>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>

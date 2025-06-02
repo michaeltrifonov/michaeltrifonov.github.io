@@ -95,6 +95,8 @@ body {
     cursor: pointer;
     position: relative;
     transition: color 0.2s;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .tab:hover {

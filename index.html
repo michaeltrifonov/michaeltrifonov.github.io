@@ -22,8 +22,8 @@
         </header>
 
         <nav class="tabs">
-            <button class="tab active" data-tab="projects">Projects</button>
-            <button class="tab" data-tab="research">Research</button>
+            <a href="#projects" class="tab active" data-tab="projects">Projects</a>
+            <a href="#research" class="tab" data-tab="research">Research</a>
         </nav>
 
         <section id="projects" class="tab-content active">
@@ -43,26 +43,26 @@
 
                 <div class="project-card">
                     <h3>Polybot: Multi-Agent Trading</h3>
-                    <p>Production multi-agent orchestration system coordinating specialized LLMs with statistical ML models. 
-                    Implements Bayesian change detection, ensemble forecasting, and adaptive agent behavior. Achieved 100-300% returns.</p>
+                    <p>24/7 autonomous system orchestrating specialized LLMs (Claude for decisions, Perplexity for research) with quantitative ML pipeline. 
+                    Features Bayesian change detection, ensemble forecasting, and complete observability. 100-300% returns on live markets.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Multi-Agent Systems</span>
-                        <span class="tech-tag">Claude/Perplexity APIs</span>
-                        <span class="tech-tag">Statistical ML</span>
-                        <span class="tech-tag">Real-time Processing</span>
+                        <span class="tech-tag">Multi-Agent Architecture</span>
+                        <span class="tech-tag">Production Autonomy</span>
+                        <span class="tech-tag">Quantitative ML</span>
+                        <span class="tech-tag">Azure Cosmos DB</span>
                     </div>
                     <a href="/projects/polybot-autonomous-trading.html" class="project-link">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>XR Trick Shot: Vision Pro</h3>
-                    <p>Physics-based AR game for Apple Vision Pro. Developed using AI assistance to navigate 
-                    non-existent documentation. Advanced physics with custom velocity damping and collision prediction.</p>
+                    <h3>XR Trick Shot: AI on visionOS</h3>
+                    <p>Leveraged AI to implement complex physics algorithms (convex casting, mesh generation) on platform outside LLM training data. 
+                    Developed context injection technique enabling AI collaboration on undocumented APIs. Shipped to App Store in 4 months.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Swift</span>
-                        <span class="tech-tag">RealityKit</span>
+                        <span class="tech-tag">AI-Assisted Development</span>
+                        <span class="tech-tag">Physics Algorithms</span>
                         <span class="tech-tag">visionOS</span>
-                        <span class="tech-tag">Spatial Computing</span>
+                        <span class="tech-tag">90Hz Processing</span>
                     </div>
                     <a href="https://apps.apple.com/us/app/xr-trick-shot/id6504303751" class="project-link">App Store →</a>
                     <a href="/projects/xr-trick-shot.html" class="project-link">View Project →</a>
@@ -139,7 +139,8 @@
     <script>
         // Tab switching functionality
         document.querySelectorAll('.tab').forEach(tab => {
-            tab.addEventListener('click', () => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
                 const tabName = tab.getAttribute('data-tab');
                 
                 // Update active tab
@@ -151,7 +152,18 @@
                     content.classList.remove('active');
                 });
                 document.getElementById(tabName).classList.add('active');
+                
+                // Update URL hash
+                window.history.replaceState(null, null, `#${tabName}`);
             });
+        });
+
+        // Handle initial hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash && (hash === 'projects' || hash === 'research')) {
+                document.querySelector(`[data-tab="${hash}"]`).click();
+            }
         });
 
         // Make all project cards clickable
@@ -165,7 +177,7 @@
                         return;
                     }
                     // For cards with multiple links, default to project page
-                    const projectLink = card.querySelector('a[href*="/projects/"]');
+                    const projectLink = card.querySelector('a[href*="/projects/"][href*="protected"]');
                     if (projectLink) {
                         window.location.href = projectLink.href;
                         return;
